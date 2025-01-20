@@ -1,0 +1,436 @@
+.container-fluid {
+  background-color: var(--white);
+}
+
+.about {
+  padding: 0px;
+  .about-hero {
+    position: relative;
+    // .layered-section {
+    //   background: linear-gradient(to top, black, transparent);
+    // }
+    position: relative;
+    background: url("../../../../assets/B.Des/BachelorDesign.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 78vh;
+    .position-absolute {
+      bottom: 115px;
+      left: 70px;
+      * {
+        color: var(--white);
+      }
+      h1 {
+        font-size: var(--seventyFive);
+      }
+      p {
+        font-size: 35px;
+      }
+    }
+  }
+
+  // .img-sec {
+  //   .container-fluid {
+  //     background-color: var(--bg-red);
+  //   }
+  //   // .container-fluid {
+  //   background-color: var(--bg-red);
+  //   // }
+  //   .container {
+  //     background-color: var(--bg-red);
+  //   }
+  //   // padding-top: 40px;
+  //   overflow: hidden;
+  //   .row {
+  //     color: var(--white);
+  //     h1 {
+  //       font-size: var(--seventyFive);
+  //     }
+  //     p {
+  //       font-size: 28px;
+  //     }
+  //   }
+  //   .image {
+  //     max-width: 100%;
+  //     display: block;
+  //     height: 526px;
+  //     position: relative;
+  //     bottom: 0px;
+  //   }
+  // }
+  .overlap-sec {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid #0000003b;
+    background: white;
+    position: relative;
+    bottom: 110px;
+    z-index: 2;
+    .vr {
+      margin: 30px 0px;
+    }
+    .first {
+      padding: 40px;
+
+      p {
+        margin: 0px;
+      }
+      .first-label {
+        font-size: var(--fifteen);
+        font-weight: 600;
+        text-align: center;
+      }
+      .first-text {
+        font-size: var(--twenty);
+        font-weight: bold;
+      }
+    }
+  }
+
+  .learn-course,
+  .about-course {
+    h1 {
+      font-size: var(--fifty);
+    }
+    p {
+      font-size: var(--twenty);
+    }
+  }
+  .learn-course {
+    .terms {
+      font-size: var(--nine);
+      span {
+        font-size: var(--eleven);
+      }
+    }
+    .submit-btn {
+      background-color: var(--bg-blue);
+      color: var(--white);
+      font-size: var(--sixteen);
+      font-weight: 500;
+    }
+    .submit-btn:hover {
+      background-color: rgba(4, 4, 128, 0.818);
+    }
+  }
+
+  .tools {
+    h1 {
+      font-size: var(--fifty);
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      padding: 0px 42px;
+      gap: 30px 0px;
+    }
+  }
+  .expect {
+    h1 {
+      font-size: var(--sixty);
+    }
+    p {
+      font-size: var(--twenty);
+    }
+  }
+
+  .why-star {
+    overflow: hidden;
+    background-color: var(--yellow-bg);
+    h1 {
+      font-size: var(--fifty);
+      color: var(--bg-blue);
+    }
+    .navbar-nav {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 23px 10px;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: var(--twentyTwo);
+      font-weight: 600;
+      i {
+        color: var(--bg-blue);
+      }
+    }
+    p {
+      font-size: var(--twentyFive);
+    }
+    .row {
+      padding: 0px 70px;
+    }
+    .card:hover {
+      box-shadow: none !important;
+      transform: translateY(-10px) scale(1, 1.03);
+      .star-1 {
+        img {
+          filter: saturate(0.1);
+        }
+      }
+    }
+    .card {
+      background: transparent;
+      border: 0px;
+      .card-title {
+        font-weight: bold;
+        font-size: var(--eighteen);
+      }
+      .card-text {
+        font-size: var(--fourteen);
+      }
+      .star-1 {
+        img {
+          filter: contrast(1);
+        }
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  }
+  .learn-cards {
+    .row {
+      div {
+        overflow: hidden;
+        border-radius: 15px !important;
+      }
+    }
+    img {
+      border-radius: 15px !important;
+      max-width: 100%;
+      height: 261px;
+      object-fit: cover;
+      padding: 5px 10px;
+    }
+    .lady img {
+      // object-fit: contain !important;
+      border-radius: 15px !important;
+    }
+  }
+
+  .bgcolor {
+    height: 100%;
+    background: #0247fe 0% 0% no-repeat padding-box;
+    opacity: 1;
+    .navbar-nav {
+      display: flex;
+      gap: 20px;
+    }
+    li {
+      color: var(--white);
+      font-size: var(--sixteen);
+    }
+    .row {
+      padding: none !important;
+    }
+  }
+}
+.bach-img {
+  max-width: 100%;
+  display: block;
+  position: relative;
+  bottom: -59px;
+}
+
+.Glimpses {
+  h1 {
+    font-size: var(--fifty);
+  }
+  .cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    .card {
+      flex: 1;
+      text-align: center;
+    }
+    img {
+      max-width: 220px;
+      max-height: 220px;
+      border-radius: 50%;
+      border: 8px solid var(--bg-blue);
+      border-right: 8px solid var(--yellow);
+    }
+  }
+}
+.accordion-div {
+  .accordion {
+    border: none;
+    // border-radius: 25px;
+    overflow: hidden;
+  }
+  .accordion-item {
+    border: none;
+
+    .accordion-button {
+      border: none;
+      border-bottom: 1px solid #e9e9e9b1;
+      box-shadow: none;
+      font-size: var(--sixteen);
+      font-weight: 500;
+      border-radius: 0px;
+    }
+    .accordion-button:not(.collapsed) {
+      background-color: transparent;
+    }
+  }
+  .load-btn {
+    padding: 8px 20px;
+    background: var(--bg-blue);
+    border-radius: 0px;
+    color: var(--white);
+    font-weight: 500;
+    margin-top: 30px;
+  }
+  .load-btn:is(:hover) {
+    background: darkblue;
+    transform: translateY(-5px) scale(1.03);
+  }
+}
+@media (min-width: 1024px) {
+  // .img-sec {
+  //   h1 {
+  //     line-height: 75px !important;
+  //   }
+  // }
+}
+@media (max-width: 1024px) {
+  .Glimpses {
+    .cards {
+      img {
+        max-width: 180px;
+        max-height: 180px;
+      }
+    }
+  }
+  // .img-sec {
+  //   h1 {
+  //     position: relative;
+  //     top: 40px;
+  //     margin-bottom: 40px !important;
+  //   }
+  //   padding-top: 0px !important;
+  //   // background-color: transparent !important;
+
+  //   .row {
+  //     display: flex;
+  //     // flex-direction: column-reverse;
+  //     .col-md-12:last-child {
+  //       width: 100%;
+  //       margin-bottom: 30px;
+  //       background-color: var(--bg-blue) !important;
+  //       justify-content: flex-end !important;
+  //     }
+  //     .col-md-12:first-child > * {
+  //       width: 100%;
+
+  //       color: black;
+  //     }
+  //   }
+  // }
+  .why-star {
+    h1 {
+      font-size: var(--fifty) !important;
+    }
+    .navbar-nav {
+      gap: 0px !important;
+    }
+  }
+}
+@media (max-width: 768px) {
+  // .img-sec {
+  //   h1 {
+  //     span {
+  //       font-size: 40px !important;
+  //     }
+  //     position: relative;
+  //     top: 0px !important;
+  //     margin-bottom: 50px !important;
+  //     font-size: 35px !important;
+  //     margin-bottom: 10px !important;
+  //   }
+  //   img {
+  //     bottom: 14px;
+  //   }
+  // }
+  .Glimpses {
+    .cards {
+      flex-direction: column;
+    }
+  }
+
+  .overlap-sec {
+    bottom: 40px !important;
+  }
+  .about-hero {
+    .position-absolute {
+      left: 30px !important;
+      bottom: 30px !important;
+      h1 {
+        font-size: 40px !important;
+      }
+      p {
+        font-size: 25px !important;
+      }
+    }
+  }
+  .first-label {
+    font-size: var(--ten);
+  }
+  .first-text {
+    font-size: var(--thirteen);
+  }
+  .tools {
+    .container {
+      padding: 0px !important;
+    }
+  }
+  .image {
+    bottom: -14px !important;
+  }
+}
+
+@media (max-width: 512px) {
+  .dropping-text {
+    position: relative;
+    top: 30px;
+  }
+  .overlap-sec {
+    flex-direction: column;
+    width: fit-content;
+    margin: 20px;
+
+    padding: 10px 80px !important;
+
+    .first {
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid;
+      padding-bottom: 10px;
+      margin-bottom: 5px;
+    }
+  }
+  .vr {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .tools {
+    .container {
+      padding: 0px 100px !important;
+    }
+  }
+}

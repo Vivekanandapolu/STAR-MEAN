@@ -1,0 +1,299 @@
+.about {
+  padding: 0px;
+}
+.about .about-hero {
+  position: relative;
+  background: url("../../../../assets/ARVR Design/ar vr design . star design institute.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 90vh;
+}
+.about .about-hero .position-absolute {
+  bottom: 60px;
+  left: 70px;
+}
+.about .about-hero .position-absolute * {
+  color: var(--white);
+}
+.about .about-hero .position-absolute h1 {
+  font-size: var(--seventyFive);
+}
+.about .about-hero .position-absolute p {
+  font-size: var(--fiftyFive);
+}
+.about .overlap-sec {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid rgba(0, 0, 0, 0.231372549);
+  padding: 40px 20px;
+  background: #fff;
+  position: relative;
+  bottom: 110px;
+}
+.about .overlap-sec .vr {
+  width: 2px;
+}
+.about .overlap-sec .first p {
+  margin: 0px;
+}
+.about .overlap-sec .first .first-label {
+  font-size: var(--thirteen);
+  font-weight: 600;
+}
+.about .overlap-sec .first .first-text {
+  font-size: var(--eighteen);
+  font-weight: bold;
+}
+.about .learn-course h1,
+.about .about-course h1 {
+  font-size: var(--fifty);
+}
+.about .learn-course .terms {
+  font-size: var(--nine);
+}
+.about .learn-course .terms span {
+  font-size: var(--eleven);
+}
+.about .learn-course .submit-btn {
+  background-color: var(--bg-blue);
+  color: var(--white);
+  font-size: var(--sixteen);
+  font-weight: 500;
+}
+.about .learn-course .submit-btn:hover {
+  background-color: rgba(4, 4, 128, 0.818);
+}
+.about .tools .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px 0px;
+}
+.about .expect h1,
+.about .Glimpses h1,
+.about .placement h1 {
+  font-size: var(--sixty);
+}
+.about .expect p,
+.about .Glimpses p,
+.about .placement p {
+  font-size: var(--twenty);
+}
+.about .expect-1 {
+  margin-top: 100px !important;
+  padding: 70px;
+  background-color: var(--bg-blue);
+}
+.about .expect-1 * {
+  color: var(--white);
+}
+.about .expect-1 h1 {
+  font-size: var(--sixty);
+}
+.about .expect-1 .expect-div {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 100px;
+}
+.about .expect-1 .expect-div .expect-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.about .expect-1 .expect-div .expect-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: var(--twentyTwo);
+}
+.about .upcoming h1 {
+  font-size: var(--sixty);
+}
+.about .upcoming p {
+  font-size: var(--twenty);
+}
+.about .upcoming .finish-btn,
+.about .upcoming .enroll-btn {
+  font-size: var(--twelve);
+  color: #fff;
+  background-color: var(--grey);
+  border-radius: 0px;
+  padding: 8px 20px;
+  font-weight: 500;
+}
+.about .upcoming .enroll-btn {
+  background-color: var(--bg-blue);
+}
+.about .upcoming .low-price {
+  font-size: var(--nine);
+  color: var(--bg-blue);
+  font-weight: 500;
+}
+.about .why-star {
+  background-color: var(--yellow-bg);
+}
+.about .why-star h1 {
+  font-size: var(--fifty);
+}
+.about .why-star p {
+  font-size: var(--twentyFive);
+}
+.about .why-star .row {
+  padding: 0px 70px;
+}
+.about .why-star .card:hover {
+  box-shadow: none !important;
+  transform: translateY(-10px) scale(1, 1.03);
+}
+.about .why-star .card:hover .star-1 img {
+  filter: saturate(0.1);
+}
+.about .why-star .card {
+  background: rgba(0, 0, 0, 0);
+  border: 0px;
+}
+.about .why-star .card .card-title {
+  font-weight: bold;
+  font-size: var(--eighteen);
+}
+.about .why-star .card .card-text {
+  font-size: var(--fourteen);
+}
+.about .why-star .card .star-1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  text-align: center;
+}
+.about .why-star .card .star-1 img {
+  filter: contrast(1);
+}
+.about .learn-cards img {
+  border-radius: 10px;
+  max-width: 100%;
+  height: 261px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.about .learn-cards .lady img {
+  -o-object-fit: contain !important;
+  object-fit: contain !important;
+}
+.about .experience .card:hover {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4431372549);
+}
+.about .experience .card:hover img {
+  scale: 1.02;
+}
+.about .footer-main {
+  padding-top: 1px !important;
+  background: #fff;
+}
+.about .footer-main .footer {
+  padding: 70px 0px;
+  background-color: var(--bg-blue) !important;
+}
+.about .footer-main .footer .card .card-title {
+  font-size: var(--twelve);
+}
+.about .footer-main .footer .card .card-text {
+  font-size: var(--sixteen);
+  font-weight: bold;
+}
+.about .footer-main .footer .card:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+  box-shadow: 3px 3px 5px #fff;
+}
+.accordion-div .accordion {
+  border: none;
+}
+.accordion-div .accordion-item {
+  border: none;
+}
+.accordion-div .accordion-item .accordion-button {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3098039216);
+  box-shadow: none;
+  font-size: var(--sixteen);
+  font-weight: bold;
+  border-radius: 0px;
+}
+.accordion-div .accordion-item .accordion-button:not(.collapsed) {
+  background-color: rgba(0, 0, 0, 0);
+}
+.accordion-div .load-btn {
+  padding: 8px 20px;
+  background: var(--bg-blue);
+  border-radius: 0px;
+  color: var(--white);
+  font-weight: 500;
+  margin-top: 30px;
+}
+.accordion-div .load-btn:is(:hover) {
+  background: #00008b;
+  transform: translateY(-5px) scale(1.03);
+}
+.bgcolor {
+  background: #0247fe 0% 0% no-repeat padding-box;
+  opacity: 1;
+  height: 311px;
+}
+.bgcolor li {
+  font: normal normal normal var(--twenty) / 100px Open Sans;
+  letter-spacing: 0px;
+  color: #fff;
+  opacity: 1;
+}
+.bgcolor .row {
+  padding: none !important;
+}
+@media (max-width: 1024px) {
+  .experience .cards > * {
+    flex: auto !important;
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .footer .card {
+    min-width: 230px;
+  }
+  .about-hero .position-absolute h1 {
+    font-size: 40px !important;
+  }
+  .about-hero .position-absolute p {
+    font-size: 30px !important;
+  }
+  .first-label {
+    font-size: var(--ten) !important;
+  }
+  .first-text {
+    font-size: var(--thirteen) !important;
+  }
+}
+@media (max-width: 512px) {
+  .overlap-sec {
+    flex-direction: column;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    padding: 10px 60px !important;
+  }
+  .overlap-sec .first {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+  }
+  .vr {
+    display: none;
+  }
+}

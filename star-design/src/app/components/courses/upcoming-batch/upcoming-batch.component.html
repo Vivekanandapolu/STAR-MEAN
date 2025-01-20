@@ -1,0 +1,312 @@
+<div class="table-responsive">
+  <div class="d-flex justify-content-end">
+    <button
+      *ngIf="userDetails?.role && userDetails?.role == 'admin'"
+      class="btn btn-sm btn-primary mb-3"
+      (click)="openCourseModal(AddBatch)"
+    >
+      Add Batch
+    </button>
+  </div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th><span>NEXT BATCH FROM</span></th>
+        <th><span>DURATION</span></th>
+        <th><span># OF CLASSES</span></th>
+        <th><span>METHODS</span></th>
+        <th><span>CLASS TIMES (IST)</span></th>
+        <th><span>BRANCH LOCATION</span></th>
+        <th><span>COURSE FEE</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let batch of batches; let idx = index">
+        <td>
+          <span class="d-flex gap-4 align-items-center justify-content-around"
+            >{{ batch?.nextBatchFrom | date : "dd MMM yyyy" }}
+            <i class="ri-arrow-right-line fs-6 cursor-pointer"></i
+          ></span>
+        </td>
+        <td>
+          <span>{{ batch?.duration }} Months</span>
+        </td>
+        <td>
+          <span>{{ batch?.days }}</span>
+        </td>
+        <td>
+          <span>{{ batch?.training_type }}</span>
+        </td>
+        <td>
+          <span>{{ batch?.timings }}</span>
+        </td>
+        <td>
+          <span>{{ batch?.location }}</span>
+        </td>
+
+        <td>
+          <div class="enroll-div d-flex align-items-center gap-3">
+            <span
+              >INR {{ batch?.course_fee }} + GST <br /><span class="low-price"
+                >As low as ₹3,444 /month</span
+              ></span
+            >
+            <button class="btn w-50 enroll-btn">Enroll Now</button>
+          </div>
+        </td>
+      </tr>
+
+      <!-- <tr>
+                <td><span class="d-flex gap-4 align-items-center justify-content-around">April 17, 2024 <i
+                            class="ri-arrow-right-line fs-6 cursor-pointer"></i></span></td>
+                <td><span>5 Months</span></td>
+                <td><span>Monday - Saturday</span></td>
+                <td><span>Classroom</span></td>
+                <td><span>07:00 PM - 11:00 PM</span></td>
+                <td><span>Ameerpet - Hyderabad</span></td>
+
+                <td>
+                    <div class="enroll-div d-flex align-items-center gap-3"><span>INR 25,000 + GST
+                            <br /><span class="low-price">As low as ₹3,444 /month</span></span> <button
+                            class="btn w-50 finish-btn">
+                            Finished
+                        </button></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td><span class="d-flex gap-4 align-items-center justify-content-around">May 10, 2024 <i
+                            class="ri-arrow-right-line fs-6 cursor-pointer"></i></span></td>
+                <td><span>5 Months</span></td>
+                <td><span>Monday - Saturday</span></td>
+                <td><span>Classroom</span></td>
+                <td><span>08:30 AM - 10:00 AM</span></td>
+                <td><span>Ameerpet - Hyderabad</span></td>
+
+                <td>
+                    <div class="enroll-div d-flex align-items-center gap-3"><span>INR 25,000 + GST
+                            <br /><span class="low-price">As low as ₹3,444 /month</span>
+                            <span class="status">
+                                <i class="ri-circle-fill text-success"></i> Available
+                            </span>
+                        </span> <span class="d-flex flex-column gap-1">
+                            <button class="btn enroll-btn">
+                                Enroll Now
+                            </button>
+                            <span class="status text-primary">
+                                05 Places Remaining
+                            </span>
+                        </span></div>
+                </td>
+            </tr>
+            <tr>
+                <td><span class="d-flex gap-4 align-items-center justify-content-around">June 05, 2024 <i
+                            class="ri-arrow-right-line fs-6 cursor-pointer"></i> </span></td>
+                <td><span>5 Months</span></td>
+                <td><span>Monday - Saturday</span></td>
+                <td><span>Classroom</span></td>
+                <td><span>08:30 AM - 10:00 AM</span></td>
+                <td><span>Hitech City - Hyderabad</span></td>
+
+                <td>
+                    <div class="enroll-div d-flex align-items-center gap-3"><span>INR 25,000 + GST
+                            <br /><span class="low-price">As low as ₹3,444 /month</span>
+                            <span class="status">
+                                <i class="ri-circle-fill text-warning"></i>Fast Filling
+                            </span>
+                        </span> <button class="btn w-50 enroll-btn">
+                            Enroll Now
+                        </button></div>
+                </td>
+            </tr>
+            <tr>
+                <td><span class="d-flex gap-4 align-items-center justify-content-around">July 10, 2024 <i
+                            class="ri-arrow-right-line fs-6 cursor-pointer"></i> </span></td>
+                <td><span>5 Months</span></td>
+                <td><span>Monday - Saturday</span></td>
+                <td><span>Classroom</span></td>
+                <td><span>08:30 AM - 10:00 AM</span></td>
+                <td><span>Hitech City - Hyderabad</span></td>
+
+                <td>
+                    <div class="enroll-div d-flex align-items-center gap-3"><span>INR 25,000 + GST
+                            <br /><span class="low-price">As low as ₹3,444 /month</span><span class="status">
+                                <i class="ri-circle-fill text-danger"></i> Closing Soon
+                            </span></span> <button class="btn w-50 enroll-btn">
+                            Enroll Now
+                        </button></div>
+                </td>
+            </tr>
+            <tr>
+                <td><span class="d-flex gap-4 align-items-center justify-content-around">Aug 01, 2024 <i
+                            class="ri-arrow-right-line fs-6 cursor-pointer"></i> </span></td>
+                <td><span>5 Months</span></td>
+                <td><span>Monday - Friday</span></td>
+                <td><span>Live Online</span></td>
+                <td><span>08:30 AM - 10:00 AM</span></td>
+                <td><span>Hebbal - Bengaluru</span></td>
+
+                <td>
+                    <div class="enroll-div d-flex align-items-center gap-3"><span>INR 25,000 + GST
+                            <br /><span class="low-price">As low as ₹3,444 /month</span></span> <button
+                            class="btn w-50 enroll-btn">
+                            Enroll Now
+                        </button></div>
+                </td>
+            </tr> -->
+    </tbody>
+    <!-- <tr > -->
+    <!-- </tr> -->
+  </table>
+  <div *ngIf="batches?.length == 0" class="text-center fw-medium text-black-50">
+    No Batches found
+  </div>
+</div>
+
+<ng-template let-modal #AddBatch>
+  <div class="modal-header">
+    <h5 class="m-0">{{ type == "add" ? "Add" : "Edit" }} Batch</h5>
+    <button
+      class="btn btn-close shadow-none"
+      (click)="modal.dismiss()"
+    ></button>
+  </div>
+  <div class="modal-body">
+    <form #batchForm="ngForm" (ngSubmit)="onSubmit(batchForm)" novalidate>
+      <!-- Next Batch From -->
+      <label for="nextBatchFrom">Next Batch From</label>
+      <input
+        type="date"
+        id="nextBatchFrom"
+        name="nextBatchFrom"
+        class="form-control mb-3"
+        [(ngModel)]="batchDetails.nextBatchFrom"
+        required
+      />
+
+      <!-- Duration -->
+      <label for="duration">Duration</label>
+      <input
+        appNumberInput
+        type="text"
+        id="duration"
+        name="duration"
+        placeholder="e.g., 3 Months"
+        class="form-control mb-3"
+        [(ngModel)]="batchDetails.duration"
+        required
+      />
+
+      <!-- Number of Classes -->
+      <label for="methods">From Day</label>
+      <select
+        id="methods"
+        name="from_day"
+        class="form-select mb-3"
+        [(ngModel)]="batchDetails.from_day"
+        required
+      >
+        <option value="null" disabled>Select Day</option>
+        <option [value]="day" *ngFor="let day of days">{{ day }}</option>
+      </select>
+
+      <label for="methods">To Day</label>
+      <select
+        id="methods"
+        name="to_day"
+        #to_day="ngModel"
+        class="form-select mb-3"
+        [(ngModel)]="batchDetails.to_day"
+        required
+      >
+        <option value="null" disabled>Select Day</option>
+        <option [value]="day" *ngFor="let day of days">{{ day }}</option>
+      </select>
+
+      <!-- Methods -->
+      <label for="training_type">Training Type</label>
+      <select
+        id="training_type"
+        name="training_type"
+        class="form-select mb-3"
+        [(ngModel)]="batchDetails.training_type"
+        required
+      >
+        <option value="null" disabled>Select a Mode</option>
+        <option value="Hybrid">Hybrid</option>
+        <option value="Online">Online</option>
+        <option value="Offline">Offline</option>
+      </select>
+
+      <!-- Class Start Time -->
+      <label for="startTime">Class Start Time (IST)</label>
+      <input
+        type="time"
+        id="startTime"
+        name="startTime"
+        class="form-control mb-3"
+        [(ngModel)]="batchDetails.startTime"
+        required
+      />
+
+      <!-- Class End Time -->
+      <label for="endTime">Class End Time (IST)</label>
+      <input
+        type="time"
+        id="endTime"
+        name="endTime"
+        class="form-control mb-3"
+        [(ngModel)]="batchDetails.endTime"
+        required
+      />
+
+      <!-- Branch Location -->
+      <label for="location">Branch Location</label>
+      <select
+        id="methods"
+        name="location"
+        #location="ngModel"
+        class="form-select mb-3"
+        [(ngModel)]="batchDetails.location"
+        required
+      >
+        <option value="null" disabled>Select a Mode</option>
+        <option value="Ameerpet - Hyderabad">Ameerpet - Hyderabad</option>
+        <option value="Hitech City - Hyderabad">Hitech City - Hyderabad</option>
+        <option value="Hebbal - Bengaluru">Hebbal - Bengaluru</option>
+      </select>
+
+      <!-- Course Fee -->
+      <label for="course_fee">Course Fee</label>
+      <input
+        appNumberInput
+        type="text"
+        id="course_fee"
+        name="course_fee"
+        placeholder="e.g., INR 32,000 + GST"
+        #course_fee="ngModel"
+        class="form-control mb-3"
+        [(ngModel)]="batchDetails.course_fee"
+        required
+      />
+
+      <label for="vacancies">Max Batch Size</label>
+      <input
+        appNumberInput
+        type="text"
+        id="vacancies"
+        name="vacancies"
+        placeholder="e.g., 20,30,50,100"
+        class="form-control mb-3"
+        #vacancies="ngModel"
+        [(ngModel)]="batchDetails.vacancies"
+        required
+      />
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary w-100 text-center">
+        Submit
+      </button>
+    </form>
+  </div>
+</ng-template>

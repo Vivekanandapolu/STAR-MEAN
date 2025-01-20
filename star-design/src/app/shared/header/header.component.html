@@ -1,0 +1,385 @@
+<div class="container-fluid track-con">
+  <div class="header m-0" [ngClass]="{ container: !windowWidth }">
+    <div class="left-head d-flex align-items-center gap-3" routerLink="/">
+      <img
+        width="42"
+        class="cursor ms-2"
+        src="../../../assets/new_logo/logo star design institute.svg"
+        alt=""
+      />
+      <h4 class="fw-bold logo-text m-0">STAR DESIGN INSTITUTE</h4>
+    </div>
+    <div class="right-head" [ngClass]="{ menu: windowWidth }">
+      <ul class="list normal-ul" *ngIf="!windowWidth">
+        <li class="list-tem dropdown">
+          <a
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="btn border-0"
+            [ngClass]="{ active: course }"
+            role="button"
+            aria-expanded="false"
+          >
+            Courses <i class="ri-arrow-down-s-line"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                routerLink="/courses/ui-ux-design"
+                [routerLinkActiveOptions]="{ exact: true }"
+                routerLinkActive="active"
+                class="dropdown-item"
+                >UI/UX DESIGN</a
+              >
+            </li>
+            <li>
+              <a
+                routerLink="/courses/ar-vr-ux-design"
+                [routerLinkActiveOptions]="{ exact: true }"
+                routerLinkActive="active"
+                class="dropdown-item"
+                >AR-VR/UX DESIGN
+              </a>
+            </li>
+            <li>
+              <a
+                routerLink="/courses/ui-vi-design"
+                [routerLinkActiveOptions]="{ exact: true }"
+                routerLinkActive="active"
+                class="dropdown-item"
+                >UX/VI DESIGN
+              </a>
+            </li>
+            <li>
+              <a
+                routerLink="/courses/graphic-design"
+                [routerLinkActiveOptions]="{ exact: true }"
+                routerLinkActive="active"
+                class="dropdown-item"
+                >GRAPHIC DESIGN
+              </a>
+            </li>
+            <li>
+              <a
+                routerLink="/courses/bachelor-of-design"
+                [routerLinkActiveOptions]="{ exact: true }"
+                routerLinkActive="active"
+                class="dropdown-item"
+                >BACHELOR OF DESIGN
+              </a>
+            </li>
+            <li>
+              <a
+                routerLink="/courses/product-management"
+                [routerLinkActiveOptions]="{ exact: true }"
+                routerLinkActive="active"
+                class="dropdown-item"
+                >PRODUCT MANAGEMENT
+              </a>
+            </li>
+            <li>
+              <a
+                routerLink="/courses/photography&digital-imaging"
+                [routerLinkActiveOptions]="{ exact: true }"
+                routerLinkActive="active"
+                class="dropdown-item text-uppercase"
+              >
+                Photography & DI
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="list-tem">
+          <a
+            routerLink="/placements"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLinkActive="active"
+            class="btn border-0 px-1"
+            role="button"
+            aria-expanded="false"
+          >
+            Placements
+          </a>
+        </li>
+        <li class="list-tem">
+          <a
+            routerLink="/services"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLinkActive="active"
+            class="btn border-0 px-1"
+            role="button"
+            aria-expanded="false"
+          >
+            Services
+          </a>
+        </li>
+        <!-- <li class="list-tem">
+                    <a routerLink="/aboutus" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                        class="btn border-0 px-1" role="button" aria-expanded="false">
+                        About Us
+                    </a>
+                </li>
+                <li class="list-tem">
+                    <a routerLink="/contact-us" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                        class="btn border-0 px-1" role="button" aria-expanded="false">
+                        Contact us
+                    </a>
+                </li> -->
+        <li class="list-tem dropdown">
+          <a
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="btn border-0"
+            [ngClass]="{ active: course }"
+            role="button"
+            aria-expanded="false"
+          >
+            Know More <i class="ri-arrow-down-s-line"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                routerLink="/aboutus"
+                [routerLinkActiveOptions]="{ exact: true }"
+                routerLinkActive="active"
+                class="dropdown-item"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                routerLink="/contact-us"
+                [routerLinkActiveOptions]="{ exact: true }"
+                routerLinkActive="active"
+                class="dropdown-item"
+                >Contact us
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="dropdown">
+        <button
+          *ngIf="windowWidth"
+          [ngClass]="{ menu: windowWidth }"
+          class="btn shadow-none p-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling"
+        >
+          <i class="ri-menu-line"></i>
+        </button>
+      </div>
+    </div>
+    <button
+      routerLink="/login"
+      *ngIf="!userDetails?.email"
+      class="btn login-btn"
+    >
+      Login
+    </button>
+    <button
+      (click)="logOut()"
+      *ngIf="userDetails?.email"
+      class="btn login-btn d-flex gap-2 align-items-center"
+    >
+      <i class="ri-logout-circle-line"></i> Sign out
+    </button>
+    <!-- <button *ngIf="userDetails?.email" class="btn border-0">
+      {{ userDetails?.email[0] | uppercase }}
+    </button> -->
+  </div>
+</div>
+
+<!--Offcanvas-->
+
+<div
+  class="offcanvas offcanvas-start"
+  id="offcanvas"
+  data-bs-backdrop="true"
+  id="offcanvasScrolling"
+  aria-labelledby="offcanvasScrollingLabel"
+>
+  <div class="offcanvas-header mb-3">
+    <div class="side-logo d-flex align-items-center gap-2">
+      <img
+        src="../../../assets/new_logo/logo star design institute-1.svg"
+        alt=""
+      />
+      <div class="d-flex flex-column">
+        <h2 class="display-6 mb-0 fw-bold text-white">Star</h2>
+        <p class="fw-medium mb-0 text-white">Design Institute</p>
+      </div>
+    </div>
+    <button
+      type="button"
+      class="text-white fs-1 p-0 btn border-none"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    >
+      <i class="ri-close-large-line"></i>
+    </button>
+  </div>
+  <div
+    class="offcanvas-body d-flex align-items-start justify-content-between position-relative"
+  >
+    <ul class="navbar-nav off-ul list">
+      <li class="list-tem nav-item dropdown">
+        <a
+          class="nav-link btn dropdown-toggle ps-0 border-0"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+          [ngClass]="{ active: course }"
+        >
+          Courses
+        </a>
+        <ul class="dropdown-menu position-relative">
+          <li>
+            <a
+              routerLink="/courses/ui-ux-design"
+              routerLinkActive="active"
+              data-bs-dismiss="offcanvas"
+              [routerLinkActiveOptions]="{ exact: true }"
+              class="dropdown-item"
+              >UI/UX Design</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/courses/ar-vr-ux-design"
+              routerLinkActive="active"
+              data-bs-dismiss="offcanvas"
+              [routerLinkActiveOptions]="{ exact: true }"
+              class="dropdown-item"
+              >AR-VR/UX Design
+            </a>
+          </li>
+          <li>
+            <a
+              routerLink="/courses/ui-vi-design"
+              routerLinkActive="active"
+              data-bs-dismiss="offcanvas"
+              [routerLinkActiveOptions]="{ exact: true }"
+              class="dropdown-item"
+              >UX/VI Design
+            </a>
+          </li>
+          <li>
+            <a
+              routerLink="/courses/graphic-design"
+              routerLinkActive="active"
+              data-bs-dismiss="offcanvas"
+              [routerLinkActiveOptions]="{ exact: true }"
+              class="dropdown-item"
+              >Graphic Design
+            </a>
+          </li>
+          <li>
+            <a
+              routerLink="/courses/bachelor-of-design"
+              routerLinkActive="active"
+              data-bs-dismiss="offcanvas"
+              [routerLinkActiveOptions]="{ exact: true }"
+              class="dropdown-item"
+              >Bachelor of Design
+            </a>
+          </li>
+          <li>
+            <a
+              routerLink="/courses/product-management"
+              routerLinkActive="active"
+              data-bs-dismiss="offcanvas"
+              [routerLinkActiveOptions]="{ exact: true }"
+              class="dropdown-item"
+              >Product Management
+            </a>
+          </li>
+
+          <li>
+            <a
+              routerLink="/courses/photography&digital-imaging"
+              routerLinkActive="active"
+              data-bs-dismiss="offcanvas"
+              [routerLinkActiveOptions]="{ exact: true }"
+              class="dropdown-item"
+              >Photography & DI
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="list-tem nav-item">
+        <a
+          class="nav-link"
+          routerLink="/placements"
+          data-bs-dismiss="offcanvas"
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLinkActive="active"
+          >Placements</a
+        >
+      </li>
+      <li class="list-tem nav-item">
+        <a
+          class="nav-link text-start"
+          routerLink="/services"
+          data-bs-dismiss="offcanvas"
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLinkActive="active"
+          >Services</a
+        >
+      </li>
+      <!-- <li class="list-tem nav-item"><a  routerLink="/hire-talent" routerLinkActive="active" data-bs-dismiss="offcanvas"
+                    [routerLinkActiveOptions]="{ exact: true }" class="nav-link">Hire Talent</a></li> -->
+      <!-- <li class="list-tem nav-item"><a  routerLink="/aboutus" routerLinkActive="active" data-bs-dismiss="offcanvas"
+                    [routerLinkActiveOptions]="{ exact: true }" class="nav-link">About Us</a></li>
+            <li class="list-tem nav-item"><a  routerLink="/contact-us" routerLinkActive="active" data-bs-dismiss="offcanvas"
+                    [routerLinkActiveOptions]="{ exact: true }" class="nav-link">Contact us</a></li> -->
+      <li class="list-tem nav-item dropdown">
+        <a
+          class="nav-link btn dropdown-toggle ps-0 border-0"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+          [ngClass]="{ active: course }"
+        >
+          Know More
+        </a>
+        <ul class="dropdown-menu position-relative">
+          <li>
+            <a
+              data-bs-dismiss="offcanvas"
+              routerLink="/aboutus"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              data-bs-dismiss="offcanvas"
+              class="dropdown-item"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              data-bs-dismiss="offcanvas"
+              routerLink="/contact-us"
+              routerLinkActive="active"
+              data-bs-dismiss="offcanvas"
+              [routerLinkActiveOptions]="{ exact: true }"
+              class="dropdown-item"
+              >Contact us
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <p class="m-0 position-absolute bottom-0 end-50">
+      <a
+        (click)="openWhatsApp()"
+        target="_blank"
+        class="btn-whatsapp-pulse btn-whatsapp-pulse-border"
+      >
+        <i class="ri-whatsapp-line text-white"></i>
+      </a>
+    </p>
+  </div>
+</div>

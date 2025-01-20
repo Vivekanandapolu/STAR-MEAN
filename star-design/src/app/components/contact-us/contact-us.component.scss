@@ -1,0 +1,138 @@
+.bgimg1 {
+  background: url("/assets/Hero images/hero-contact-us.jpg");
+  min-height: 357px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  display: flex !important;
+  align-items: center !important;
+  .container {
+    margin-top: 0px !important;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+  }
+  * {
+    color: var(--white);
+  }
+  display: flex;
+  align-items: flex-end;
+  h1 {
+    font-size: var(--fifty);
+  }
+  p {
+    font-size: var(--twenty);
+  }
+}
+
+.left {
+  h4 {
+    font-size: var(--twenty);
+  }
+  p {
+    font-size: var(--eighteen);
+  }
+  h6 {
+    font-size: var(--fifteen);
+  }
+  span.link {
+    font-size: var(--sixteen);
+    font-weight: normal !important;
+    color: var(--bg-blue);
+    cursor: pointer;
+  }
+  p.link {
+    color: var(--bg-blue);
+    cursor: pointer;
+  }
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    * {
+      cursor: pointer;
+    }
+    *:hover {
+      filter: saturate(0.3);
+    }
+  }
+}
+
+.right {
+  .card {
+    // width: 450px;
+    margin: auto !important;
+    margin-bottom: 20px !important;
+  }
+  .contact-card {
+    border: 1px solid rgba(0, 0, 0, 0.183) !important;
+    border-radius: 0px;
+    p {
+      font-size: var(--fifteen);
+    }
+    span {
+      font-size: var(--twelve);
+    }
+  }
+  .form-card {
+    margin: auto !important;
+    border: 1px solid rgba(0, 0, 0, 0.183) !important;
+    border-radius: 0px;
+    max-width: 100% !important  ;
+    span {
+      color: red;
+    }
+    p {
+      font-size: var(--fifteen);
+    }
+    .form-label {
+      font-size: var(--fifteen) !important;
+      font-weight: bold;
+    }
+    .checks {
+      label {
+        font-size: var(--twelve);
+      }
+    }
+    .form-check-label:last-child {
+      font-size: var(--ten);
+    }
+    .send-btn {
+      width: 100%;
+      background: var(--bg-blue);
+      color: var(--white);
+      font-weight: 600;
+      font-size: var(--twenty);
+      border-radius: 3px;
+      height: 52px;
+    }
+    .send-btn:hover {
+      background-color: rgb(45, 45, 169);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .right {
+    .card {
+      width: 450px;
+    }
+  }
+}
+
+@media (max-width: 786px) {
+  .bgimg1 {
+    p {
+      font-size: var(--twentyFive) !important;
+    }
+  }
+}
+
+.container-fluid.p-0.bg-white.main > div {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}

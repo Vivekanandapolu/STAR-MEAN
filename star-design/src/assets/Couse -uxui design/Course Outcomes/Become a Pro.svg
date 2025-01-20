@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="107" height="106" viewBox="0 0 107 106">
+  <g id="Become_a_Pro" data-name="Become a Pro" transform="translate(-310 -3476)">
+    <ellipse id="Become_a_Pro-2" data-name="Become a Pro" cx="53.5" cy="53" rx="53.5" ry="53" transform="translate(310 3476)" fill="#0247fe"/>
+    <g id="crown" transform="translate(339 3508)">
+      <path id="Path_3481" data-name="Path 3481" d="M30.583,5.431a4.307,4.307,0,0,0-7.184,0l-8.5,13L8.41,14.747a4.258,4.258,0,0,0-6.284,4.64l4.412,18a1.826,1.826,0,0,0,1.78,1.381H45.664a1.826,1.826,0,0,0,1.78-1.381l4.411-18a4.258,4.258,0,0,0-6.284-4.64l-6.494,3.679ZM27.5,7.386a.615.615,0,0,0-1.026,0L17.04,21.824a1.847,1.847,0,0,1-2.452.587l-8-4.534a.608.608,0,0,0-.9.663L9.76,35.155H44.223L48.3,18.54a.608.608,0,0,0-.9-.663l-8,4.534a1.847,1.847,0,0,1-2.452-.587Z" transform="translate(-2 -3.5)" fill="#fff" fill-rule="evenodd"/>
+      <path id="Path_3482" data-name="Path 3482" d="M6.259,19.055a1.805,1.805,0,1,0,0,3.61H40.445a1.805,1.805,0,1,0,0-3.61Z" transform="translate(1.639 19.82)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

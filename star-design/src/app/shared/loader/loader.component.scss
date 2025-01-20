@@ -1,0 +1,109 @@
+.loader {
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  position: fixed;
+  z-index: 1100;
+  top: 0px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.546), #00000083);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #000;
+}
+
+.middle {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.bar {
+  margin-top: 50px;
+  width: 10px;
+  height: 50px;
+  // background: #fff;
+  display: inline-block;
+  transform-origin: bottom center;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  /*   box-shadow:5px 10px 20px inset rgba(255,23,25.2); */
+  animation: loader 1.2s linear infinite;
+}
+
+.bar1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-delay: 0.1s;
+}
+
+.bar2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-delay: 0.2s;
+}
+
+.bar3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-delay: 0.3s;
+}
+
+.bar4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-delay: 0.4s;
+}
+
+.bar5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-delay: 0.5s;
+}
+
+.bar6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-delay: 0.6s;
+}
+
+.bar7 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-delay: 0.7s;
+}
+
+.bar8 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-delay: 0.8s;
+}
+
+@keyframes loader {
+  0% {
+    transform: scaleY(0.1);
+    background: rgb(204, 101, 101);
+  }
+
+  50% {
+    transform: scaleY(1);
+    background: yellowgreen;
+  }
+
+  100% {
+    transform: scaleY(0.1);
+    background: transparent;
+  }
+}

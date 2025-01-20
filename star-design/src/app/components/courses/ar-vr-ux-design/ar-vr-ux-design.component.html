@@ -1,0 +1,578 @@
+<div class="container-fluid about main">
+  <div
+    [ngStyle]="{
+      'background-image': 'url(' + domain + courseData?.bg_img + ')'
+    }"
+    class="container-fluid about-hero mb-5"
+  >
+    <div class="position-absolute dropping-text">
+      <h1 class="fw-bold m-0">
+        Learn <br />
+        AR<span class="slash">/</span>VR Design
+      </h1>
+      <p class="m-0 fw-medium mb-5">Bring the future to life</p>
+    </div>
+  </div>
+  <div class="container overlap-sec mt-0">
+    <div class="first">
+      <p class="first-label">DURATION</p>
+      <p class="first-text">{{ courseData?.duration }} Months</p>
+    </div>
+    <div class="vr"></div>
+    <div class="first">
+      <p class="first-label">UPCOMING BATCH</p>
+      <p class="first-text">
+        <!-- 05th Oct 2024 -->
+        {{ courseData?.batch_date | date : "dd" }}th
+        {{ courseData?.batch_date | date : "MMM yyyy" }}
+      </p>
+    </div>
+    <div class="vr"></div>
+
+    <div class="first">
+      <p class="first-label">COURSES FEE</p>
+      <p class="first-text">INR {{ courseData?.course_fee | number }} + GST</p>
+    </div>
+    <div class="vr"></div>
+    <div class="first">
+      <p class="first-label">ELIGIBILITY</p>
+      <p class="first-text">{{ courseData?.eligibility }}</p>
+    </div>
+  </div>
+  <div class="container-fluid pb-5 bg-white">
+    <div class="container about-course mt-0">
+      <h2 class="fw-bold display-5 m-0 mb-3 text-center">About this course</h2>
+      <p class="m-0 text-center text-md-start">
+        Augmented Reality is the fastest-growing field, providing new
+        opportunities to shape 3D interactions that were limited to the 2D
+        screens of our devices. a new perspective on how we interact with our
+        world. Learn a new perspective on how we can interact with our world
+        under the guidance of a seasoned mentor, you’ll learn to design
+        immersive AR apps that can solve real-world problems using a
+        step-by-step approach of our curriculum.
+      </p>
+    </div>
+  </div>
+  <div class="container-fluid py-5 bg-grey">
+    <div class="container learn-course mb-5">
+      <h2 class="fw-bold display-5 m-0 mb-4 text-center">What You’ll Learn</h2>
+      <div class="row">
+        <div class="col-lg-8 mb-3 col-md-12 col-sm-12 col-xl-8 col-xxl-7">
+          <div class="accordion-div">
+            <!--Accordion starts-->
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne"
+                    aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne"
+                  >
+                    Fundamentals and types of AR/VR
+                  </button>
+                </h2>
+                <div
+                  id="panelsStayOpen-collapseOne"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="panelsStayOpen-headingOne"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the first item's accordion body.</strong> It
+                    is shown by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseTwo"
+                  >
+                    UX processes for AR/VR
+                  </button>
+                </h2>
+                <div
+                  id="panelsStayOpen-collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="panelsStayOpen-headingTwo"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the second item's accordion body.</strong>
+                    It is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseThree"
+                  >
+                    Imagineering
+                  </button>
+                </h2>
+                <div
+                  id="panelsStayOpen-collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="panelsStayOpen-headingThree"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It
+                    is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseFour"
+                    aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseFour"
+                  >
+                    Tools & devices
+                  </button>
+                </h2>
+                <div
+                  id="panelsStayOpen-collapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="panelsStayOpen-headingFour"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It
+                    is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseFive"
+                    aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseFive"
+                  >
+                    Field of view for AR/VR
+                  </button>
+                </h2>
+                <div
+                  id="panelsStayOpen-collapseFive"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="panelsStayOpen-headingFive"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It
+                    is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseSix"
+                    aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseSix"
+                  >
+                    Presence, agency and affordance
+                  </button>
+                </h2>
+                <div
+                  id="panelsStayOpen-collapseSix"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="panelsStayOpen-headingSix"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It
+                    is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseSeven"
+                    aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseSeven"
+                  >
+                    Degree of control
+                  </button>
+                </h2>
+                <div
+                  id="panelsStayOpen-collapseSeven"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="panelsStayOpen-headingSeven"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It
+                    is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingEight">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseEight"
+                    aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseEight"
+                  >
+                    The difference in Designing for 2D & 3D interfaces
+                  </button>
+                </h2>
+                <div
+                  id="panelsStayOpen-collapseEight"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="panelsStayOpen-headingEight"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It
+                    is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingNine">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseNine"
+                    aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseNine"
+                  >
+                    Gesture, gaze and voice control
+                  </button>
+                </h2>
+                <div
+                  id="panelsStayOpen-collapseNine"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="panelsStayOpen-headingNine"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It
+                    is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTen">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseTen"
+                    aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseTen"
+                  >
+                    User testing & research methods
+                  </button>
+                </h2>
+                <div
+                  id="panelsStayOpen-collapseTen"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="panelsStayOpen-headingTen"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It
+                    is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingEleven">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseEleven"
+                    aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseEleven"
+                  >
+                    Getting familiar with AR UIs.
+                  </button>
+                </h2>
+                <div
+                  id="panelsStayOpen-collapseEleven"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="panelsStayOpen-headingEleven"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It
+                    is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwelve">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseTwelve"
+                    aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseTwelve"
+                  >
+                    Challenges of 3D interaction design
+                  </button>
+                </h2>
+                <div
+                  id="panelsStayOpen-collapseTwelve"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="panelsStayOpen-headingTwelve"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It
+                    is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xl-4 col-xxl-5">
+          <app-contact-form
+            pageRoute="/courses/ar-vr-ux-design"
+          ></app-contact-form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid py-5 bg-white">
+    <div class="container tools mb-5">
+      <h2 class="fw-bold display-5 m-0 mb-4 text-center">
+        Tools You'll Master
+      </h2>
+      <div class="container">
+        <img
+          alt="Star Design Ar Vr Image"
+          src="/assets/ARVR Design/Oculus.svg"
+        />
+        <img
+          alt="Star Design Ar Vr Image"
+          src="/assets/ARVR Design/Unity.svg"
+        />
+        <img
+          alt="Star Design Ar Vr Image"
+          src="/assets/ARVR Design/adobe ar. star design institute.svg"
+        />
+        <img
+          alt="Star Design Ar Vr Image"
+          src="../../../../assets/ARVR Design/Ar vr logo/Unreal.svg"
+        />
+        <!-- <img alt="Star Design Ar Vr Image" src="/assets/ARVR Design/tilt brush.svg"> -->
+      </div>
+    </div>
+    <!-- </div> -->
+
+    <!-- <div class="container-fluid py-5 bg-grey"> -->
+
+    <div class="container upcoming mb-5 pt-5">
+      <h2 class="fw-bold display-5 m-0 mb-2 text-center">
+        Upcoming Course Dates & Batches
+      </h2>
+      <p class="fw-medium text-center m-0 mb-4">
+        Experience personalized 1-on-1 mentor sessions with industry experts in
+        small batches (7-10 students per batch)
+      </p>
+      <app-upcoming-batch
+        pageRoute="/courses/ar-vr-ux-design"
+      ></app-upcoming-batch>
+    </div>
+  </div>
+
+  <div class="container-fluid py-5 bg-white">
+    <div class="container expect mb-5">
+      <h2 class="fw-bold display-5 m-0 mb-2 text-center">
+        What to expect after the course
+      </h2>
+      <p class="fw-medium text-center m-0 mb-5">
+        Upon completion of the course, we will connect you with prospective
+        employers so that you will be ready to pursue a range of exciting career
+        options.
+      </p>
+    </div>
+  </div>
+  <div class="container expect mb-5">
+    <h2 class="fw-bold display-5 m-0 mb-2 text-center">Career Prospects</h2>
+    <p class="fw-medium text-center m-0 mb-5">
+      Career Prospects for Conversation Design : Your Best Options
+    </p>
+  </div>
+
+  <div class="container expect pb-xl-5 pb-md-5 pb-sm-0">
+    <div class="row">
+      <div class="col-lg-5 col-xxl-5 col-md-12 col-sm-12 p-0">
+        <img
+          alt="Star Design Ar Vr Image"
+          src="/assets/ARVR Design/Career Paths for . star design instutute.png"
+          class="img-fluid h-100"
+        />
+      </div>
+      <div class="col-lg-7 col-xxl-7 col-md-12 col-sm-12 p-0">
+        <div
+          class="bgcolor h-100 d-flex justify-content-around align-items-center gap-3 p-3"
+        >
+          <div>
+            <ul class="navbar-nav expect-list gap-5">
+              <li>
+                <img
+                  alt="Star Design Ar Vr Image"
+                  src="/assets/Couse -uxui design/tickmark-secondary.svg"
+                />UX Designer
+              </li>
+              <li>
+                <img
+                  alt="Star Design Ar Vr Image"
+                  src="/assets/Couse -uxui design/tickmark-secondary.svg"
+                />Visual Designer
+              </li>
+              <li>
+                <img
+                  alt="Star Design Ar Vr Image"
+                  src="/assets/Couse -uxui design/tickmark-secondary.svg"
+                />Product designer
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="navbar-nav expect-list gap-5">
+              <li>
+                <img
+                  alt="Star Design Ar Vr Image"
+                  src="/assets/Couse -uxui design/tickmark-secondary.svg"
+                />UX Designer
+              </li>
+              <li>
+                <img
+                  alt="Star Design Ar Vr Image"
+                  src="/assets/Couse -uxui design/tickmark-secondary.svg"
+                />Visual Designer
+              </li>
+              <li>
+                <img
+                  alt="Star Design Ar Vr Image"
+                  src="/assets/Couse -uxui design/tickmark-secondary.svg"
+                />Product designer
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

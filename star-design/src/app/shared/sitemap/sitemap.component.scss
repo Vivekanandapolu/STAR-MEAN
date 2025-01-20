@@ -1,0 +1,54 @@
+.sitemap-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sitemap-container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.breadcrumb {
+  background: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.sitemap-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.sitemap-column h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.sitemap-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sitemap-column ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.sitemap-column ul li a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .sitemap-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .sitemap-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

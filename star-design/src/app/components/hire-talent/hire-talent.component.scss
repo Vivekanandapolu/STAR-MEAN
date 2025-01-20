@@ -1,0 +1,39 @@
+h4 {
+  font-size: var(--seventeen);
+  color: var(--black);
+}
+p {
+  font-size: var(--ten);
+  color: var(--red);
+}
+label {
+  font-size: 13px;
+  color: var(--black);
+  font-weight: 500;
+}
+.btn-verify {
+  background-color: var(--grey);
+  padding: 0px 20px;
+  float: right;
+}
+
+.verify {
+  display: none;
+  font-size: 14px !important;
+}
+
+.all {
+  font-size: var(--thirteen);
+}
+
+.submit-btn {
+  width: fit-content !important;
+  margin: auto !important;
+  height: 52px !important;
+  padding: 0px 41px;
+}
+
+.card {
+  max-width: 430px !important;
+  margin: auto;
+}

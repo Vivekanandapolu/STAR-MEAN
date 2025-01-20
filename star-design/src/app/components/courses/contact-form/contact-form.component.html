@@ -1,0 +1,91 @@
+<div class="card form-card">
+  <div class="card-body">
+    <div class="card-title">
+      <h4 class="m-0 fw-bold mb-2 text-center">Contact course advisor</h4>
+    </div>
+    <div class="card-img-top mb-3">
+      <img
+        alt="Star Design UI/UX Image"
+        class="img-fluid"
+        src="../../../../assets/Couse -uxui design/Contact course advisor copy.png"
+      />
+    </div>
+    <form class="form" #form="ngForm" (ngSubmit)="addContact(form)">
+      <input
+        required
+        #first_name="ngModel"
+        [(ngModel)]="contactFormData.first_name"
+        type="text"
+        placeholder="First Name"
+        class="form-control shadow-none mb-3"
+        name="first_name"
+        autocomplete="given-name"
+      />
+      <input
+        required
+        #last_name="ngModel"
+        [(ngModel)]="contactFormData.last_name"
+        type="text"
+        placeholder="Last Name"
+        class="form-control shadow-none mb-3"
+        name="last_name"
+        autocomplete="family-name"
+      />
+      <input
+        required
+        #email="ngModel"
+        [(ngModel)]="contactFormData.email"
+        type="email"
+        placeholder="Email Address"
+        class="form-control shadow-none mb-3"
+        name="email"
+        autocomplete="email"
+      />
+      <input
+        required
+        #mobile_number="ngModel"
+        appNumberInput
+        [(ngModel)]="contactFormData.mobile_number"
+        type="text"
+        placeholder="Mobile Number"
+        class="form-control shadow-none mb-3"
+        name="mobile_number"
+        autocomplete="tel"
+      />
+      <select
+        required
+        #qualification="ngModel"
+        [(ngModel)]="contactFormData.qualification"
+        class="form-select shadow-none mb-3 w-100"
+        placeholder=""
+        name="qualification"
+        autocomplete="education-level"
+      >
+        <option value="null" disabled>Level of study</option>
+        <option value="undergraduation">Under Graduation</option>
+        <option value="postgraduation">Post Graduation</option>
+      </select>
+      <select
+        required
+        #gender="ngModel"
+        [(ngModel)]="contactFormData.gender"
+        class="form-select shadow-none mb-3 w-100"
+        name="gender"
+      >
+        <option value="null" disabled>I am a..</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">other</option>
+      </select>
+
+      <p class="terms mb-4">
+        By downloading this course guide I accept the terms of the Star Design
+        institute
+        <span class="text-primary text-decoration-underline"
+          >Privacy Policy</span
+        >.
+      </p>
+      <button type="submit" class="btn submit-btn w-100">Submit</button>
+    </form>
+  </div>
+</div>

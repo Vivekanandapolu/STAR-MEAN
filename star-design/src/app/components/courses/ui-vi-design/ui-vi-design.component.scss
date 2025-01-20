@@ -1,0 +1,362 @@
+.container-fluid {
+  background-color: var(--white);
+}
+
+.about {
+  padding: 0px;
+  .about-hero {
+    position: relative;
+    .layered-section {
+      background: linear-gradient(to top, var(--bg-blue) 10%, transparent 90%);
+    }
+    position: relative;
+    background: url("../../../../assets/Hero\ images/uxvi. star design instutute.png.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 78vh;
+    .position-absolute {
+      z-index: 2;
+      bottom: 60px;
+      left: 70px;
+      * {
+        color: var(--white);
+      }
+      h1 {
+        font-size: var(--seventyFive);
+      }
+      p {
+        font-size: var(--fiftyFive);
+      }
+    }
+  }
+
+  .overlap-sec {
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid #0000003b;
+    background: white;
+    position: relative;
+    bottom: 110px;
+    .vr {
+      // width: 2px;
+      margin: 30px 0px;
+    }
+    .first {
+      padding: 40px;
+
+      p {
+        margin: 0px;
+      }
+      .first-label {
+        font-size: var(--fifteen);
+        font-weight: 600;
+        text-align: center;
+      }
+      .first-text {
+        font-size: var(--twenty);
+        font-weight: bold;
+      }
+    }
+  }
+
+  .learn-course,
+  .about-course {
+    h1 {
+      font-size: var(--fifty);
+    }
+    p {
+      font-size: var(--twenty);
+    }
+  }
+  .learn-course {
+    .terms {
+      font-size: var(--nine);
+      span {
+        font-size: var(--eleven);
+      }
+    }
+    .submit-btn {
+      background-color: var(--bg-blue);
+      color: var(--white);
+      font-size: var(--sixteen);
+      font-weight: 500;
+    }
+    .submit-btn:hover {
+      background-color: rgba(4, 4, 128, 0.818);
+    }
+  }
+
+  .tools {
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px 0px;
+    }
+  }
+  .expect,
+  .Glimpses,
+  .placement {
+    h1 {
+      font-size: var(--sixty);
+    }
+    p {
+      font-size: var(--twenty);
+    }
+  }
+  .expect-1 {
+    margin-top: 100px !important;
+    padding: 70px;
+
+    background-color: var(--bg-blue);
+    * {
+      color: var(--white);
+    }
+    h1 {
+      font-size: var(--sixty);
+    }
+    .expect-div {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 100px;
+      .expect-list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        li {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          font-size: var(--twentyTwo);
+        }
+      }
+    }
+  }
+
+  .why-star {
+    background-color: var(--yellow-bg);
+    h1 {
+      font-size: var(--fifty);
+    }
+    p {
+      font-size: var(--twentyFive);
+    }
+    .row {
+      padding: 0px 70px;
+    }
+    .card:hover {
+      box-shadow: none !important;
+      transform: translateY(-10px) scale(1, 1.03);
+      .star-1 {
+        img {
+          filter: saturate(0.1);
+        }
+      }
+    }
+    .card {
+      background: transparent;
+      border: 0px;
+      .card-title {
+        font-weight: bold;
+        font-size: var(--eighteen);
+      }
+      .card-text {
+        font-size: var(--fourteen);
+      }
+      .star-1 {
+        img {
+          filter: contrast(1);
+        }
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  }
+  .learn-cards {
+    .row {
+      div {
+        overflow: hidden;
+        border-radius: 15px !important;
+      }
+    }
+    img {
+      border-radius: 15px !important;
+      max-width: 100%;
+      height: 261px;
+      object-fit: cover;
+      padding: 5px 10px;
+    }
+    .lady img {
+      // object-fit: contain !important;
+      border-radius: 15px !important;
+    }
+
+    div:last-child {
+      img {
+        min-width: 100%;
+      }
+    }
+  }
+
+  .experience {
+    .card:hover {
+      box-shadow: 3px 3px 10px #00000071;
+      img {
+        scale: 1.02;
+      }
+    }
+  }
+  .footer-main {
+    padding-top: 1px !important;
+    background: white;
+
+    .footer {
+      padding: 70px 0px;
+      background-color: var(--bg-blue) !important;
+      .card {
+        .card-title {
+          font-size: var(--twelve);
+        }
+        .card-text {
+          font-size: var(--sixteen);
+          font-weight: bold;
+        }
+      }
+      .card:hover {
+        cursor: pointer;
+        transform: scale(1.04);
+        box-shadow: 3px 3px 5px white;
+      }
+    }
+  }
+}
+.accordion-div {
+  .accordion {
+    border: none;
+    // border-radius: 25px;
+    overflow: hidden;
+  }
+  .accordion-item {
+    border: none;
+
+    .accordion-button {
+      border: none;
+      border-bottom: 1px solid #e9e9e9b1;
+      box-shadow: none;
+      font-size: var(--sixteen);
+      font-weight: 500;
+      border-radius: 0px;
+    }
+    .accordion-button:not(.collapsed) {
+      background-color: transparent;
+    }
+  }
+  .load-btn {
+    padding: 8px 20px;
+    background: var(--bg-blue);
+    border-radius: 0px;
+    color: var(--white);
+    font-weight: 500;
+    margin-top: 30px;
+  }
+  .load-btn:is(:hover) {
+    background: darkblue;
+    transform: translateY(-5px) scale(1.03);
+  }
+}
+.bgcolor {
+  background: #0247fe 0% 0% no-repeat padding-box;
+  opacity: 1;
+  ul {
+    display: flex;
+    gap: 22px;
+  }
+  li {
+    font-size: var(--sixteen);
+    color: white;
+  }
+  .row {
+    padding: none !important;
+  }
+}
+
+.tools {
+  p {
+    font: normal normal normal 20px/31px Open Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
+  h1 {
+    font: normal normal bold 45px/55px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
+}
+@media (max-width: 1024px) {
+  .experience {
+    .cards > * {
+      flex: auto !important;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    .card {
+      min-width: 230px;
+    }
+    flex-wrap: wrap;
+    // flex-direction: column !important;
+    gap: 30px;
+  }
+  .about-hero {
+    .position-absolute {
+      h1 {
+        font-size: 45px !important;
+      }
+      p {
+        font-size: 25px !important;
+      }
+      left: 0px !important;
+      padding: 0px 20px;
+      bottom: 30px !important;
+    }
+  }
+  .first-label {
+    font-size: var(--ten) !important;
+  }
+  .first-text {
+    font-size: var(--thirteen) !important;
+  }
+}
+
+@media (max-width: 512px) {
+  .overlap-sec {
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
+
+    padding: 10px 80px !important;
+    * {
+      font-size: 16px !important;
+    }
+    .first {
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid;
+      padding-bottom: 10px;
+      margin-bottom: 5px;
+    }
+  }
+  .vr {
+    display: none;
+  }
+}

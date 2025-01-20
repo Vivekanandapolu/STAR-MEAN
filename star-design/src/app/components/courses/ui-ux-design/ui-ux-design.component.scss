@@ -1,0 +1,354 @@
+.container-fluid {
+  background-color: white;
+}
+
+.about {
+  padding: 0px;
+  .about-hero {
+    position: relative;
+    // background: url("/assets/Couse -uxui design/ui ux design.star design institute.png");
+    background: url("../../../../assets/Hero\ images/ui ux star design institute.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 78vh;
+
+    .position-absolute {
+      bottom: 60px;
+      left: 70px;
+      * {
+        color: var(--white);
+      }
+      h1 {
+        font-size: var(--seventyFive);
+      }
+      p {
+        font-size: var(--fiftyFive);
+      }
+    }
+  }
+
+  .overlap-sec {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid #0000003b;
+    background: white;
+    position: relative;
+    bottom: 110px;
+    .vr {
+      margin: 30px 0px;
+    }
+    .first {
+      padding: 40px;
+
+      p {
+        margin: 0px;
+      }
+      .first-label {
+        font-size: var(--fifteen);
+        font-weight: 600;
+        text-align: center;
+      }
+      .first-text {
+        font-size: var(--twenty);
+        font-weight: bold;
+      }
+    }
+  }
+
+  .learn-course,
+  .about-course {
+    h1 {
+      font-size: var(--fifty);
+    }
+    p {
+      font-size: var(--twenty);
+    }
+  }
+  .learn-course {
+    .terms {
+      font-size: var(--nine);
+      span {
+        font-size: var(--eleven);
+      }
+    }
+  }
+
+  .tools {
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px 0px;
+    }
+  }
+  .expect,
+  .Glimpses,
+  .placement {
+    h1 {
+      font-size: var(--sixty);
+    }
+    p {
+      font-size: var(--twenty);
+    }
+  }
+  .expect-1 {
+    // margin-top: 100px !important;
+    background: url("/assets/Couse -uxui design/ui ux course  bc.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    .bg-img {
+      padding: 70px;
+      background-color: var(--bg-blue) !important;
+      opacity: 0.9;
+    }
+    * {
+      color: var(--white);
+    }
+    h1 {
+      font-size: var(--sixty);
+    }
+    .expect-div {
+      display: flex;
+      justify-content: space-evenly;
+      // gap: 100px;
+      .expect-list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        li {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          font-size: var(--twentyTwo);
+        }
+      }
+    }
+  }
+
+  .why-star {
+    background-color: var(--yellow-bg);
+    h1 {
+      font-size: var(--fifty);
+    }
+    p {
+      font-size: var(--twentyFive);
+    }
+    .card:hover {
+      box-shadow: none !important;
+      transform: translateY(-10px) scale(1, 1.03);
+      .star-1 {
+        img {
+          filter: saturate(0.1);
+        }
+      }
+    }
+    .card {
+      background: transparent;
+      border: 0px;
+      .card-title {
+        font-weight: bold;
+        font-size: var(--eighteen);
+      }
+      .card-text {
+        font-size: var(--fourteen);
+      }
+      .star-1 {
+        img {
+          filter: contrast(1);
+        }
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  }
+  .learn-cards {
+    .row {
+      div {
+        overflow: hidden;
+        border-radius: 15px !important;
+      }
+    }
+    img {
+      border-radius: 15px !important;
+      max-width: 100%;
+      height: 261px;
+      object-fit: cover;
+      padding: 5px 00px;
+    }
+    .lady img {
+      // object-fit: contain !important;
+      border-radius: 15px !important;
+    }
+    div:last-child {
+      img {
+        min-width: 100%;
+      }
+    }
+  }
+
+  .experience {
+    .card:hover {
+      box-shadow: 3px 3px 10px #00000071;
+      img {
+        scale: 1.02;
+      }
+    }
+  }
+  .footer-main {
+    padding-top: 1px !important;
+    background: white;
+
+    .footer {
+      padding: 70px 0px;
+      background-color: var(--bg-blue) !important;
+      .card {
+        .card-title {
+          font-size: var(--twelve);
+        }
+        .card-text {
+          font-size: var(--sixteen);
+          font-weight: bold;
+        }
+      }
+      .card:hover {
+        cursor: pointer;
+        // transform: scale(1.04);
+        // box-shadow: 3px 3px 5px white;
+      }
+    }
+  }
+}
+// .accordion-div {
+//   .accordion {
+//     border: none;
+//     border-radius: 25px;
+//     overflow: hidden;
+//   }
+//   .accordion-item {
+//     border: none;
+
+//     .accordion-button {
+//       border: none;
+//       border-bottom: 1px solid #e9e9e9b1;
+//       box-shadow: none;
+//       font-size: var(--sixteen);
+//       font-weight: 500;
+//       border-radius: 0px;
+//     }
+//     .accordion-button:not(.collapsed) {
+//       background-color: transparent;
+//     }
+//   }
+//   .load-btn {
+//     padding: 8px 20px;
+//     background: var(--bg-blue);
+//     border-radius: 0px;
+//     color: var(--white);
+//     font-weight: 500;
+//     margin-top: 30px;
+//   }
+//   .load-btn:is(:hover) {
+//     background: darkblue;
+//     transform: translateY(-5px) scale(1.03);
+//     border-radius: 25px;
+//   }
+// }
+
+@media (max-width: 1024px) {
+  .experience {
+    .cards > * {
+      flex: auto !important;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .about-hero {
+    background-position-x: -100px;
+  }
+
+  .footer {
+    .card {
+      min-width: 230px;
+    }
+    flex-wrap: wrap;
+    // flex-direction: column !important;
+    gap: 30px;
+  }
+  .about-hero {
+    .position-absolute {
+      left: 30px !important;
+      bottom: 30px !important;
+      h1 {
+        font-size: 40px !important;
+      }
+      p {
+        font-size: 25px !important;
+      }
+    }
+  }
+  .learn-cards {
+    img {
+      height: 150px !important;
+    }
+  }
+  .first-label {
+    font-size: var(--ten);
+  }
+  .first-text {
+    font-size: var(--thirteen);
+  }
+}
+
+@media (max-width: 512px) {
+  .overlap-sec {
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
+
+    padding: 10px 80px !important;
+
+    .first {
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid;
+      padding-bottom: 10px;
+      margin-bottom: 5px;
+    }
+    .lady {
+      object-position: top !important;
+    }
+  }
+  .vr {
+    display: none;
+  }
+  .star-1 {
+    flex-direction: row !important;
+    text-align: left !important;
+    position: relative;
+    img {
+      position: relative;
+      bottom: 28px;
+      width: 80px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .expect-list:first-child {
+    padding-left: 150px !important;
+  }
+  .about-course {
+    position: relative;
+    bottom: 1.5rem;
+  }
+
+  .expect-list:last-child {
+    padding-right: 150px !important;
+  }
+}

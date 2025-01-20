@@ -1,0 +1,1129 @@
+<!-- <app-header></app-header> -->
+<div class="container-fluid main">
+  <div class="img-sec">
+    <div class="layered-section"></div>
+    <div
+      class=""
+      [ngClass]="{
+        container: !windowWidth,
+        'mt-0': !windowWidth,
+        'container-fluid': windowWidth
+      }"
+    >
+      <div class="row h-100 pt-sm-5">
+        <div
+          class="d-flex align-items-center justify-content-center col-lg-7 col-xl-7 col-xxl-7 col-md-7 col-sm-12"
+          [ngClass]="{ 'mb-3': windowWidth }"
+        >
+          <div
+            [ngClass]="{ 'px-3': windowWidth }"
+            class="h-100 left-col d-flex dropping-text flex-column gap-2 align-items-start justify-content-center"
+          >
+            <h1 class="m-0 mb-4 fw-bold">
+              LEARN, CERTIFY,<br />MAKE AN IMPACT.
+            </h1>
+            <p class="display-5 fw-light">Skills For Better Future . . .</p>
+          </div>
+        </div>
+        <div
+          class="col-lg-5 col-xl-5 col-xxl-5 col-md-5 col-sm-12 d-flex align-items-center justify-content-start"
+        >
+          <img
+            alt="Star Design Landing Page Image"
+            class="image object-fit-contain"
+            loading="lazy"
+            src="../../../assets/comp_hero_img/star design institute - hero image.png"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Course Cards-->
+  <div class="container-fluid bg-white pt-5">
+    <div class="container">
+      <div class="content1 mt-0 mb-4">
+        <h2
+          class="fw-bold display-5 d-flex align-items-md-center gap-3 gap-md-0 mb-3 align-items-start flex-column flex-md-row justify-content-md-between m-md-0"
+        >
+          Explore Featured Courses
+          <button
+            *ngIf="userDetails?.role && userDetails?.role == 'admin'"
+            (click)="openCourseModal(addCourse)"
+            class="btn-sm btn btn-primary fw-medium"
+          >
+            Add Course
+          </button>
+        </h2>
+        <p class="m-0">Learn in-demand skills to future-proof your career.</p>
+      </div>
+      <div class="row courses p-0">
+        <div
+          class="col-lg-4 mb-5 col-xl-4 col-xxl-4 col-md-6 col-sm-12"
+          *ngFor="let course of coursesData; let idx = index"
+        >
+          <div class="card h-100">
+            <ng-container
+              *ngIf="userDetails?.role && userDetails?.role == 'admin'"
+            >
+              <span class="edit" (click)="confirmDelete(course)">
+                <i class="ri-delete-bin-5-line"></i>
+              </span>
+              <span class="delete" (click)="editCourseModal(addCourse, course)">
+                <i class="ri-pencil-fill"></i>
+              </span>
+            </ng-container>
+            <div [routerLink]="course?.route">
+              <div class="card-img-top">
+                <img
+                  alt="Star Design Landing Page Image"
+                  [src]="domain + course?.course_img"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="card-body pb-0">
+                <div class="course-title">
+                  <h4 class="card-title mb-2">
+                    {{ course?.title }}
+                  </h4>
+                  <p class="card-text mb-2">{{ course?.description }}</p>
+                </div>
+                <div class="duration">
+                  <p class="m-0 pb-2">
+                    <span class="fw-bold">Duration</span> :
+                    {{ course?.duration }} Months
+                  </p>
+                  <p class="m-0 mt-2">
+                    <span class="fw-bold">Upcoming Batch </span> :
+                    {{ course?.batch_date | date : "dd MMM yyy" }}
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button
+                  class="btn border-0 know-btn shadow-none d-flex gap-3 align-items-center"
+                >
+                  KNOW MORE
+                  <img
+                    alt="Star Design Landing Page Image"
+                    class="black"
+                    src="/assets/arrow/Group 75711.svg"
+                  />
+                  <img
+                    alt="Star Design Landing Page Image"
+                    class="blue"
+                    src="/assets/Blue arrow/arrow.svg"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid why-star py-0 py-sm-5">
+    <div class="container">
+      <div class="row">
+        <h2 class="m-0 display-5 mb-2 mb-sm-5 fw-bold text-center">
+          Why Choose Star Design Institute ?
+        </h2>
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="card h-100">
+            <img
+              src="../../../assets/Landing Page/Web -New/Why Choose Star Design Institute.svg"
+              alt="New why section hero image"
+              class="card-img-top"
+            />
+          </div>
+        </div>
+        <div class="col-lg-8 col-12">
+          <div class="row">
+            <!-- <div class="inner-star"> -->
+            <div class="col-12 mt-3">
+              <div class="inner-star">
+                <div class="card mb-0 mb-md-4">
+                  <div class="star-1 d-flex flex-column flex-md-row">
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="../../../assets/Landing page new why sec/Landing page/Small Batch.svg"
+                    />
+                    <div class="right">
+                      <h4 class="card-title mb-2">Small Batch</h4>
+                      <p class="card-text">
+                        Real-time class with max 7-10 students per batch.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- </div>
+                        <div class="col-6 mt-3 "> -->
+                <div class="card mb-0 mb-md-4">
+                  <div class="star-1 d-flex flex-column flex-md-row">
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="../../../assets/Landing page new why sec/Landing page/11 Mentorship.svg"
+                    />
+                    <div class="right">
+                      <h4 class="card-title mb-2">1:1 Mentorship</h4>
+                      <p class="card-text">
+                        1:1 personalized mentorship with industry experts.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- </div>
+                        <div class="col-6 mt-3 "> -->
+                <div class="card mb-0 mb-md-4">
+                  <div class="star-1 d-flex flex-column flex-md-row">
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="../../../assets/Landing page new why sec/Landing page/Industry Exposure.svg"
+                    />
+                    <div class="right">
+                      <h4 class="card-title mb-2">Industry Exposure</h4>
+                      <p class="card-text">
+                        Engage with industry professionals, and tackle solve
+                        user problems.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- </div>
+                        <div class="col-6 mt-3 "> -->
+                <div class="card mb-0 mb-md-4">
+                  <div class="star-1 d-flex flex-column flex-md-row">
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="../../../assets/Landing page new why sec/Landing page/Experience Teachers.svg"
+                    />
+                    <div class="right">
+                      <h4 class="card-title mb-2">Experience Teachers</h4>
+                      <p class="card-text">
+                        Learn from top instructors from MNCs and universities.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- </div>
+                        <div class="col-6 mt-3 "> -->
+                <div class="card mb-0 mb-md-4">
+                  <div class="star-1 d-flex flex-column flex-md-row">
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="../../../assets/Landing page new why sec/Landing page/Real-World Projects.svg"
+                    />
+                    <div class="right">
+                      <h4 class="card-title mb-2">Real-World Projects</h4>
+                      <p class="card-text">
+                        Build your professional portfolio by working on 3
+                        real-world projects.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- </div>
+                        <div class="col-6 mt-3 "> -->
+                <div class="card mb-0 mb-md-4">
+                  <div class="star-1 d-flex flex-column flex-md-row">
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="../../../assets/Landing page new why sec/Landing page/Hybrid Classes.svg"
+                    />
+                    <div class="right">
+                      <h4 class="card-title mb-2">Hybrid Classes</h4>
+                      <p class="card-text">
+                        Flexible learning: classroom, online, or weekends, based
+                        on your preference.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- </div> -->
+              </div>
+            </div>
+            <!-- </div> -->
+          </div>
+        </div>
+      </div>
+
+      <!--Need to insert in the new page-->
+
+      <!-- <div class="container events">
+        <div class="content1 text-center mt-5 mb-4">
+            <h2 class="fw-bold display-5 m-0">
+                Our Upcoming Events
+            </h2>
+            <p class="m-0">Where people find all events that they may want to involve</p>
+        </div>
+
+        <div class="row ">
+            <div class="col-lg-4 mb-4 col-xl-4 col-xxl-4 col-md-6 col-sm-12">
+                <div class="card h-100">
+                    <div class="card-img-top position-relative ">
+                        <img alt="Star Design Landing Page Image" src="/assets/Landing Page/Our Upcoming Events/ux design - hyderabad.star design institute.png"
+                            class="img-fluid " >
+                        <span class="date">18 AUGUST 2022</span>
+                    </div>
+                    <div class="card-body ">
+                        <h4 class="card-title mb-3">
+                            UX Design - Hyderabad
+                        </h4>
+                        <div class="duration">
+                            <p class="m-0 mb-2">18 AUGUST - 10:30AM - 12:30AM</p>
+                            <p class="m-0 ">HYDERABAD</p>
+                        </div>
+                    </div>
+                    <div class="card-footer mb-3 d-flex align-items-center justify-content-between ">
+                        <button class="btn fw-medium register-btn">REGISTER NOW</button>
+                        <i class="ri-share-fill"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4 col-xl-4 col-xxl-4 col-md-6 col-sm-12">
+                <div class="card h-100">
+                    <div class="card-img-top position-relative ">
+                        <img alt="Star Design Landing Page Image" src="/assets/Landing Page/Our Upcoming Events/ux ui design - virtual.star design institute.png"
+                            class="img-fluid " >
+                        <span class="date">10 DECEMBER 2022</span>
+                    </div>
+                    <div class="card-body ">
+                        <h4 class="card-title mb-3">
+                            UX/UI Design - Virtual
+                        </h4>
+                        <div class="duration">
+                            <p class="m-0 mb-2">10 DECEMBER - 05:00PM - 07:00PM</p>
+                            <p class="m-0 nav-link text-primary fw-medium">VIRTUAL</p>
+                        </div>
+                    </div>
+                    <div class="card-footer mb-3 d-flex align-items-center justify-content-between ">
+                        <button class="btn fw-medium register-btn">REGISTER NOW</button>
+                        <i class="ri-share-fill"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4 col-xl-4 col-xxl-4 col-md-6 col-sm-12">
+                <div class="card h-100">
+                    <div class="card-img-top position-relative ">
+                        <img alt="Star Design Landing Page Image" src="/assets/Landing Page/Our Upcoming Events/ux ui design - bengaluru.star design institute.png"
+                            class="img-fluid " >
+                        <span class="date">05 AUGUST 2022</span>
+                    </div>
+                    <div class="card-body ">
+                        <h4 class="card-title mb-3">
+                            UX/UI Design - Bengaluru
+                        </h4>
+                        <div class="duration">
+                            <p class="m-0 mb-2">05 AUGUST - 05:00PM - 07:00PM</p>
+                            <p class="m-0 ">HYDERABAD</p>
+                        </div>
+                    </div>
+                    <div class="card-footer mb-3 d-flex align-items-center justify-content-between ">
+                        <button class="btn fw-medium register-btn">REGISTER NOW</button>
+                        <i class="ri-share-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+      <div class="container-fluid bg-white pt-5">
+        <div class="container work mt-0">
+          <div class="content1 text-center">
+            <h2 class="fw-bold display-5 m-0">Where our Students Work</h2>
+            <p class="m-0">
+              Start your carrier with industry leader our course covers the
+              latest industry-relevant topics and tools.
+            </p>
+          </div>
+
+          <div class="logos-div pt-5">
+            <div class="card-img">
+              <img
+                alt="Star Design Landing Page Image"
+                class="logos"
+                src="/assets/Landing Page/where our students works/Amazon.star design institute.svg"
+              />
+            </div>
+            <div class="card-img">
+              <img
+                alt="Star Design Landing Page Image"
+                class="logos"
+                src="/assets/Landing Page/where our students works/Flipkart.star design institute.svg"
+              />
+            </div>
+
+            <div class="card-img">
+              <img
+                alt="Star Design Landing Page Image"
+                class="logos"
+                src="/assets/Landing Page/where our students works/Cognizant.star design institute.svg"
+              />
+            </div>
+
+            <div class="card-img">
+              <img
+                alt="Star Design Landing Page Image"
+                class="logos"
+                src="/assets/Landing Page/where our students works/Facebook.star design institute.svg"
+              />
+            </div>
+            <div class="card-img">
+              <img
+                alt="Star Design Landing Page Image"
+                class="logos"
+                src="/assets/Landing Page/where our students works/Accenture.star design institute.svg"
+              />
+            </div>
+            <div class="card-img">
+              <img
+                alt="Star Design Landing Page Image"
+                class="logos"
+                src="../../../assets/where work/Freshworks-vector-logo.svg"
+              />
+            </div>
+            <div class="card-img">
+              <img
+                alt="Star Design Landing Page Image"
+                class="logos"
+                src="/assets/Landing Page/where our students works/tcs.star design institute.svg"
+              />
+            </div>
+            <div class="card-img">
+              <img
+                alt="Star Design Landing Page Image"
+                class="logos"
+                src="/assets/Landing Page/where our students works/Indigo.star design institute.svg"
+              />
+            </div>
+
+            <div class="card-img">
+              <img
+                alt="Star Design Landing Page Image"
+                class="logos"
+                src="/assets/Landing Page/where our students works/qualcomm.star design institute.svg"
+              />
+            </div>
+            <div class="card-img">
+              <img
+                alt="Star Design Landing Page Image"
+                class="logos"
+                src="/assets/Landing Page/where our students works/EY.star design institute.svg"
+              />
+            </div>
+
+            <div class="card-img">
+              <img
+                alt="Star Design Landing Page Image"
+                class="logos"
+                src="../../../assets/where work/layer1.svg"
+              />
+            </div>
+            <div class="card-img">
+              <img
+                alt="Star Design Landing Page Image"
+                class="logos"
+                src="/assets/Landing Page/where our students works/sap.star design institute.svg"
+              />
+            </div>
+            <div class="card-img">
+              <img
+                alt="Star Design Landing Page Image"
+                class="logos"
+                src="/assets/Landing Page/where our students works/coupa.star design institute.svg"
+              />
+            </div>
+            <div class="card-img">
+              <img
+                alt="Star Design Landing Page Image"
+                class="logos"
+                src="/assets/Landing Page/where our students works/zoho.star design institute.svg"
+              />
+            </div>
+
+            <div class="card-img">
+              <img
+                alt="Star Design Landing Page Image"
+                class="logos"
+                src="/assets/Landing Page/where our students works/Capgemini.star design institute.svg"
+              />
+            </div>
+            <div class="card-img">
+              <img
+                alt="Star Design Landing Page Image"
+                class="logos"
+                src="/assets/Landing Page/where our students works/mindtree.star design institute.svg"
+              />
+            </div>
+            <div class="card-img">
+              <img
+                alt="Star Design Landing Page Image"
+                class="logos"
+                src="../../../assets/where work/livspace-1695932166-AWR5M.svg"
+              />
+            </div>
+            <div class="card-img">
+              <img
+                alt="Star Design Landing Page Image"
+                class="logos"
+                src="/assets/Landing Page/where our students works/hcl.star design institute.svg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid bg-white py-5">
+        <div class="container experience">
+          <div class="content1 text-center mt-5 mb-4">
+            <h2 class="fw-bold display-5 m-0">Placement Stories</h2>
+            <p class="m-0">
+              Let’s hear from our students who were placed with different firms
+              based on the respective courses.
+            </p>
+          </div>
+          <div class="arrows d-flex justify-content-end">
+            <div class="d-flex align-items-center gap-4 mb-3">
+              <img
+                alt="Star Design Landing Page Image"
+                width="20px"
+                src="/assets/arrow/Group 76396.svg"
+                alt=""
+                (click)="slide1('left')"
+                (click)="slide('left')"
+                [ngClass]="{ 'img-scroll': !isLeftScrollable }"
+                [style.pointer-events]="isLeftScrollable ? 'auto' : 'none'"
+              />
+              <img
+                alt="Star Design Landing Page Image"
+                width="20px"
+                src="/assets/arrow/Group 75711.svg"
+                alt=""
+                (click)="slide1('right')"
+                (click)="slide('right')"
+                [ngClass]="{ 'img-scroll': !isRightScrollable }"
+                [style.pointer-events]="isRightScrollable ? 'auto' : 'none'"
+              />
+            </div>
+          </div>
+          <div class="cards" #cards (scroll)="updateScrollState()">
+            <div class="card">
+              <div class="card-body">
+                <p class="card-text mb-3">
+                  <img
+                    alt="Star Design Landing Page Image"
+                    src="/assets/Landing Page/logo-icons/Group 76304.svg"
+                  />Whole team of UX Academy was supportive along the whole
+                  course. Quickly reacting, offering information and help. I am
+                  really impressed by the level of competence presented by the
+                  teacher. And of course what cannot be overestimated, providing
+                  contact with real clients .
+                </p>
+                <div class="exp-div">
+                  <div class="img-div">
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="/assets/Landing Page/Student Experiences/Sukasi Raju.png"
+                      width="141"
+                    />
+                  </div>
+                  <div class="exp-text">
+                    <h4 class="fw-bold m-0">Sukasi Raju</h4>
+                    <p class="card-text mb-3">UX Designer at</p>
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="/assets/Landing Page/Student Experiences/codeprism.stardesigninstitute.svg"
+                      width="120"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <p class="card-text mb-3">
+                  <img
+                    alt="Star Design Landing Page Image"
+                    src="/assets/Landing Page/logo-icons/Group 76304.svg"
+                  />I was so impressed with UX Academy. The content is expansive
+                  and the instructors are extremely knowledgeable. The course
+                  setup is well thought out and its fantastic you get to work on
+                  a real-life product. I’ve done a few courses and this is by
+                  far up there with the best.
+                </p>
+                <div class="exp-div">
+                  <div class="img-div">
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="/assets/Landing Page/Student Experiences/Shruti.png"
+                      width="141"
+                    />
+                  </div>
+                  <div class="exp-text">
+                    <h4 class="fw-bold m-0">Shruti Amudalapalli</h4>
+                    <p class="card-text mb-3">UX Designer at</p>
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="/assets/Landing Page/Student Experiences/pimsleur.stardesigninstitute.svg"
+                      width="120"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <p class="card-text mb-3">
+                  <img
+                    alt="Star Design Landing Page Image"
+                    src="/assets/Landing Page/logo-icons/Group 76304.svg"
+                  />I recently completed the UI/UX course it was an amazing
+                  experience. The course was very informative and engaging, with
+                  a great mix of theoretical and practical components ,Highly
+                  recommend for anyone looking to get into UX/UI design .
+                </p>
+                <div class="exp-div">
+                  <div class="img-div">
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="/assets/Landing Page/Student Experiences/Nagasri Battaraju.png"
+                      width="141"
+                    />
+                  </div>
+                  <div class="exp-text">
+                    <h4 class="fw-bold m-0">Nagasri Battaraju</h4>
+                    <p class="card-text mb-3">UX Designer at</p>
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="/assets/Landing Page/Student Experiences/united..stardesigninstitute.svg"
+                      width="120"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <p class="card-text mb-3">
+                  <img
+                    alt="Star Design Landing Page Image"
+                    src="/assets/Landing Page/logo-icons/Group 76304.svg"
+                  />It's a great learning experience with star design institute
+                  Friendly environment makes design learning fun & engaging.
+                  Developed new skills, unleashed creativity. Grateful for
+                  experience & knowledge gained. Built confidence, launched my
+                  design career.
+                </p>
+                <div class="exp-div">
+                  <div class="img-div">
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="/assets/Landing Page/Amulya/Amulya.png"
+                      width="141"
+                    />
+                  </div>
+                  <div class="exp-text">
+                    <h4 class="fw-bold m-0">Amulya</h4>
+                    <p class="card-text mb-3">UX Designer at</p>
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="/assets/Landing Page/Amulya/Group 4622.svg"
+                      width="120"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--new-->
+            <div class="card">
+              <div class="card-body">
+                <p class="card-text mb-3">
+                  <img
+                    alt="Star Design Landing Page Image"
+                    src="/assets/Landing Page/logo-icons/Group 76304.svg"
+                  />My experience was excellent. The institute provided compreh
+                  - ensive training, and the mentors were highly knowledgeable
+                  and supportive.The interactive learning environment enhanced
+                  my skills effectively.
+                </p>
+                <div class="exp-div">
+                  <div class="img-div">
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="../../../assets/Landing Page/placement story/Swetha Sharma.png"
+                      width="141"
+                    />
+                  </div>
+                  <div class="exp-text">
+                    <h4 class="fw-bold m-0">Swetha Sharma</h4>
+                    <p class="card-text mb-3">UX Designer at</p>
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="../../../assets/Landing Page/placement story/Capgemini.png"
+                      width="120"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-body">
+                <p class="card-text mb-3">
+                  <img
+                    alt="Star Design Landing Page Image"
+                    src="/assets/Landing Page/logo-icons/Group 76304.svg"
+                  />Grateful for Star Design Institute. Mentor Rajesh
+                  transformed my passion into a pursuit. Comprehensive
+                  curriculum, hands-on approach, invaluable skills. Thankful for
+                  supportive environment, growth opportunities. More than an
+                  Institute. Thank you, Rajesh Sir, for inspiring me.
+                </p>
+                <div class="exp-div">
+                  <div class="img-div">
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="../../../assets/Landing Page/placement story/Sunil Kumar.png"
+                      width="141"
+                    />
+                  </div>
+                  <div class="exp-text">
+                    <h4 class="fw-bold m-0">Sunil Kumar</h4>
+                    <p class="card-text mb-3">UX Designer at</p>
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="../../../assets/Landing Page/placement story/SU Logo.png"
+                      width="120"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-body">
+                <p class="card-text mb-3">
+                  <img
+                    alt="Star Design Landing Page Image"
+                    src="/assets/Landing Page/logo-icons/Group 76304.svg"
+                  />Thrived in design thanks to star design institute's expert
+                  faculty, hands-on learning & focus on innovation. Grateful for
+                  the experience that launched my dream career.
+                  #ThankYouStarInstitute
+                </p>
+                <div class="exp-div">
+                  <div class="img-div">
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="../../../assets/Landing Page/placement story/S. Priya.png"
+                      width="141"
+                    />
+                  </div>
+                  <div class="exp-text">
+                    <h4 class="fw-bold m-0">S. Priya</h4>
+                    <p class="card-text mb-3">UX Designer at</p>
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="../../../assets/Landing Page/placement story/Segurosoft.png"
+                      width="120"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-body">
+                <p class="card-text mb-3">
+                  <img
+                    alt="Star Design Landing Page Image"
+                    src="/assets/Landing Page/logo-icons/Group 76304.svg"
+                  />This institute blew me away! I learned so much more than I
+                  ever expected, and the interactive classes kept me hooked. If
+                  you're looking to level up your skills, this is the place. It
+                  was an absolute blast, and I highly recommend it.
+                </p>
+                <div class="exp-div">
+                  <div class="img-div">
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="../../../assets/Landing Page/placement story/k. sireesha.png"
+                      width="141"
+                    />
+                  </div>
+                  <div class="exp-text">
+                    <h4 class="fw-bold m-0">K. Sireesha</h4>
+                    <p class="card-text mb-3">UX Designer at</p>
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="../../../assets/Landing Page/placement story/Quanint Techsoft.png"
+                      width="120"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-body">
+                <p class="card-text mb-3">
+                  <img
+                    alt="Star Design Landing Page Image"
+                    src="/assets/Landing Page/logo-icons/Group 76304.svg"
+                  />Star Design Institute provided a great learning experience
+                  from scratch. It's one of the best institutes for UI/UX
+                  designers. I appreciated the opportunity to develop my skills
+                  and knowledge in a supportive environment. Highly recommend.
+                </p>
+                <div class="exp-div">
+                  <div class="img-div">
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="../../../assets/Landing Page/placement story/Saik Yasin.png"
+                      width="141"
+                    />
+                  </div>
+                  <div class="exp-text">
+                    <h4 class="fw-bold m-0">Saik Yasin</h4>
+                    <p class="card-text mb-3">UX Designer at</p>
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="../../../assets/Landing Page/placement story/logo.svg"
+                      width="120"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <p class="card-text mb-3">
+                  <img
+                    alt="Star Design Landing Page Image"
+                    src="/assets/Landing Page/logo-icons/Group 76304.svg"
+                  />Hi, I’m Suresh. I just finished the UI/UX course, and it was
+                  a fantastic experience! It was full of valuable insights and
+                  offered a great mix of theory and hands-on practice. I highly
+                  recommend it to anyone eager to dive into UX/UI design.
+                  #GreatPlaceForUIUXCourse
+                </p>
+                <div class="exp-div">
+                  <div class="img-div">
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="../../../assets/Landing Page/placement story/suresh.png"
+                      width="141"
+                    />
+                  </div>
+                  <div class="exp-text">
+                    <h4 class="fw-bold m-0">Suresh Chouhan</h4>
+                    <p class="card-text mb-3">Xamarin / UX Designer at</p>
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="../../../assets/Landing Page/placement story/deloitte.svg"
+                      width="120"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <p class="card-text mb-3">
+                  <img
+                    alt="Star Design Landing Page Image"
+                    src="/assets/Landing Page/logo-icons/Group 76304.svg"
+                  />The UI/UX course was an incredible experience! It provided
+                  valuable insights and struck the perfect balance between
+                  theory and practical application. I highly recommend it to
+                  anyone eager to explore the world of UX/UI design
+                </p>
+                <div class="exp-div">
+                  <div class="img-div">
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="../../../assets/Landing Page/placement story/amit.png"
+                      width="141"
+                    />
+                  </div>
+                  <div class="exp-text">
+                    <h4 class="fw-bold m-0">Amit Biswas</h4>
+                    <p class="card-text mb-3">UX Designer at</p>
+                    <img
+                      alt="Star Design Landing Page Image"
+                      src="../../../assets/Landing Page/placement story/jazeera.svg"
+                      width="120"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid bg-white py-5">
+        <div class="container organization">
+          <div class="content1 text-center mb-4">
+            <h2 class="fw-bold display-5 m-0">Affiliations & Accreditations</h2>
+            <p class="m-0 mb-5">
+              We've Affiliations and Accreditations with the following esteemed
+              organizations
+            </p>
+          </div>
+          <div class="org-logos mb-3">
+            <img
+              alt="Star Design Landing Page Image"
+              src="../../../assets/Landing Page/Affiliations, Accreditations & Recognitions/Google for education.svg"
+            />
+            <img
+              alt="Star Design Landing Page Image"
+              src="/assets/Landing Page/Affiliations, Accreditations & Recognitions/wdo..star design institute.svg"
+            />
+            <img
+              alt="Star Design Landing Page Image"
+              src="../../../assets/Landing Page/Affiliations, Accreditations & Recognitions/nasscom.svg"
+            />
+            <img
+              alt="Star Design Landing Page Image"
+              src="/assets/Landing Page/Affiliations, Accreditations & Recognitions/adobe.star design institute.svg"
+            />
+            <img
+              alt="Star Design Landing Page Image"
+              src="/assets/JNAFAU_logo.png"
+            />
+            <img
+              alt="Star Design Landing Page Image"
+              src="/assets/Landing Page/Affiliations, Accreditations & Recognitions/chitkara university..star design institute.svg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template let-modal #addCourse>
+  <div class="modal-header py-0">
+    <h6 class="m-0">{{ type == "add" ? "Add" : "Edit" }} Course</h6>
+    <button
+      class="btn btn-close shadow-none"
+      (click)="modal.dismiss()"
+    ></button>
+  </div>
+  <div class="modal-body">
+    <form #form="ngForm" (ngSubmit)="addCourseCard(form)">
+      <div class="row">
+        <!-- Course Title -->
+        <div class="col-12 col-md-6">
+          <label for="title" class="form-label m-0">Course Title</label>
+          <ng-container *ngIf="addCourseForm.title == 'custom'">
+            <input
+              required
+              #custom_course_title="ngModel"
+              [(ngModel)]="addCourseForm.custom_course_title"
+              type="text"
+              id="custom_course_title"
+              class="form-control mb-3 form-control-sm shadow-none"
+              name="custom_course_title"
+              placeholder="Enter course Name"
+            />
+          </ng-container>
+          <select
+            *ngIf="addCourseForm.title !== 'custom'"
+            class="mb-3 form-select shadow-none form-select-sm"
+            [(ngModel)]="addCourseForm.title"
+            name="title"
+            #title="ngModel"
+            (ngModelChange)="onCourseChange($event)"
+          >
+            <option value="null" disabled>Select Course</option>
+            <option value="UI/UX Design">UI/UX Design</option>
+            <option value="AR-VR/UX Design">AR-VR/UX Design</option>
+            <option value="UX/VI Design">UX/VI Design</option>
+            <option value="Bachelor of Design">Bachelor of Design</option>
+            <option value="Product Management">Product Management</option>
+            <option value="Graphic Design">Graphic Design</option>
+            <option value="custom">Custom</option>
+          </select>
+        </div>
+        <!-- Duration -->
+        <div class="col-12 col-md-6">
+          <label for="duration" class="form-label m-0">Duration</label>
+          <input
+            required
+            #duration="ngModel"
+            [(ngModel)]="addCourseForm.duration"
+            type="text"
+            id="duration"
+            class="form-control mb-3 form-control-sm shadow-none"
+            name="duration"
+            placeholder="Enter Duration in Months"
+            appNumberInput
+          />
+        </div>
+
+        <!-- Description -->
+        <div class="col-12">
+          <label for="des" class="form-label m-0">Description</label>
+          <textarea
+            required
+            #description="ngModel"
+            [(ngModel)]="addCourseForm.description"
+            id="des"
+            class="form-control mb-3 form-control-sm shadow-none"
+            name="description"
+            placeholder="Enter course description"
+          ></textarea>
+        </div>
+
+        <!-- Course Fee -->
+        <div class="col-12 col-md-6">
+          <label for="Fee" class="form-label m-0">Course Fee</label>
+          <input
+            required
+            #course_fee="ngModel"
+            [(ngModel)]="addCourseForm.course_fee"
+            type="text"
+            id="Fee"
+            class="form-control mb-3 form-control-sm shadow-none"
+            name="course_fee"
+            placeholder="Enter Course Fee"
+            appNumberInput
+          />
+        </div>
+
+        <!-- Eligibility -->
+        <div class="col-12 col-md-6">
+          <label for="eligibility" class="form-label m-0">Eligibility</label>
+          <input
+            required
+            #eligibility="ngModel"
+            [(ngModel)]="addCourseForm.eligibility"
+            type="text"
+            id="eligibility"
+            class="form-control mb-3 form-control-sm shadow-none"
+            name="eligibility"
+            placeholder="Enter Course Eligibility"
+          />
+        </div>
+
+        <!-- Upcoming Batch -->
+        <div class="col-12 col-md-6">
+          <label for="Batch" class="form-label m-0">Upcoming Batch</label>
+          <input
+            required
+            #batch_date="ngModel"
+            [(ngModel)]="addCourseForm.batch_date"
+            type="date"
+            id="Batch"
+            class="form-control mb-3"
+            name="batch_date"
+            placeholder="Enter Duration in Months"
+          />
+        </div>
+
+        <!-- Course Route -->
+        <div class="col-12 col-md-6">
+          <label class="form-label m-0">Course Page Navigation</label>
+          <select
+            class="mb-3 form-select form-select-sm"
+            [value]="selectedRoute"
+            name="route"
+            disabled
+          >
+            <option [value]="null" disabled>Select route</option>
+            <option value="/courses/ui-ux-design">UI/UX Design</option>
+            <option value="/courses/ar-vr-ux-design">AR-VR/UX Design</option>
+            <option value="/courses/ui-vi-design">UX/VI Design</option>
+            <option value="/courses/graphic-design">Graphic Design</option>
+            <option value="/courses/bachelor-of-design">
+              Bachelor of Design
+            </option>
+            <option value="/courses/product-management">
+              Product Management
+            </option>
+            <option value="/courses/photography&digital-imaging">
+              Photography & DI
+            </option>
+          </select>
+        </div>
+
+        <!-- Upload Course Image -->
+        <div class="col-12">
+          <div
+            [ngClass]="{ nofile: !courseFiles.course_img }"
+            class="upload-div mb-4"
+          >
+            <label for="img2" class="form-label d-flex gap-3"
+              ><i class="ri-upload-2-line"></i> Course Image
+            </label>
+            <input
+              required
+              type="file"
+              (change)="uploadFile($event, '')"
+              id="img2"
+              class="d-none"
+            />
+            <span
+              [ngbTooltip]="courseFiles.course_img"
+              container="body"
+              placement="top"
+              style="flex: 1"
+              *ngIf="courseFiles.course_img"
+              class="d-flex align-items-center justify-content-between px-2"
+            >
+              <p class="file m-0">
+                {{ courseFiles.course_img | trim : 30 }}
+              </p>
+              <span
+                ><i
+                  (click)="removeImg('course')"
+                  class="text-danger ri-close-line"
+                ></i
+              ></span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Upload Background Image -->
+        <div class="col-12">
+          <div [ngClass]="{ nofile: !courseFiles.bg_img }" class="upload-div">
+            <label for="img1" class="form-label d-flex gap-3"
+              ><i class="ri-upload-2-line"></i> Hero Image
+            </label>
+            <input
+              required
+              type="file"
+              (change)="uploadFile($event, 'bg')"
+              id="img1"
+              class="d-none"
+            />
+            <span
+              [ngbTooltip]="courseFiles.bg_img"
+              container="body"
+              placement="top"
+              style="flex: 1"
+              *ngIf="courseFiles.bg_img"
+              class="d-flex align-items-center justify-content-between px-2"
+            >
+              <p class="file m-0">
+                {{ courseFiles.bg_img | trim : 30 }}
+              </p>
+              <span
+                ><i
+                  (click)="removeImg('bg')"
+                  class="text-danger ri-close-line"
+                ></i
+              ></span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-sm btn-dark w-100 text-center">
+        {{ type == "add" ? "Add Course" : "Submit" }}
+      </button>
+    </form>
+  </div>
+</ng-template>

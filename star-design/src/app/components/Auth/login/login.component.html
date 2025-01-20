@@ -1,0 +1,202 @@
+<div class="container-fluid">
+  <div class="login-div">
+    <div
+      class="card"
+      [ngStyle]="{
+        'max-width': !isSignUpPage ? '360px' : '500px',
+        width: !isSignUpPage ? '360px' : 'fit-content'
+      }"
+    >
+      <div class="card-body p-4">
+        <div class="d-flex justify-content-center">
+          <img
+            class="mb-4"
+            src="../../../../assets/new_logo/logo star design institute.svg"
+            alt=""
+          />
+        </div>
+        <div class="mb-3 text-center">
+          <h4 class="card-title">Welcome to Student Portal</h4>
+          <p class="card-text">Please sign-in to your account now.</p>
+        </div>
+
+        <form
+          #form="ngForm"
+          novalidate
+          (ngSubmit)="!isSignUpPage ? login(form) : signUp(form)"
+        >
+          <!--Login-->
+          <ng-container *ngIf="!isSignUpPage">
+            <label for="email" class="form-label">Email</label>
+            <input
+              required
+              #email="ngModel"
+              [(ngModel)]="formData.email"
+              type="email"
+              name="email"
+              class="form-control mb-2"
+              placeholder="Enter your email"
+              id="email"
+            />
+
+            <label for="Password" class="form-label">Password</label>
+            <div class="input-group d-flex mb-3">
+              <input
+                required
+                #password="ngModel"
+                [(ngModel)]="formData.password"
+                [type]="!passwordType ? 'password' : 'text'"
+                name="password"
+                class="form-control"
+                [placeholder]="!passwordType ? '************' : '1234567890'"
+                id="password"
+              />
+              <span *ngIf="passwordType" class="input-group-text"
+                ><i (click)="passwordType = false" class="ri-eye-line"></i
+              ></span>
+              <span *ngIf="!passwordType" class="input-group-text"
+                ><i (click)="passwordType = true" class="ri-eye-off-line"></i>
+              </span>
+            </div>
+
+            <div class="d-flex align-items-center gap-2 mb-3">
+              <input
+                type="checkbox"
+                id="remember"
+                name="remember"
+                class="form-check"
+              />
+              <label for="remember" class="form-label mb-0">Remember Me </label>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+              <p class="forgot">Forgot Password?</p>
+              <p
+                class="forgot mb-3"
+                (click)="
+                  isSignUpPage = true;
+                  form.form.markAsUntouched();
+                  formData = {}
+                "
+              >
+                New User? Signup <i class="ri-arrow-right-line"></i>
+              </p>
+            </div>
+          </ng-container>
+
+          <!--SignUp-->
+
+          <ng-container *ngIf="isSignUpPage">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <label for="first_name" class="form-label">First Name</label>
+                <input
+                  required
+                  #first_name="ngModel"
+                  [(ngModel)]="formData.first_name"
+                  type="text"
+                  name="first_name"
+                  class="form-control mb-2"
+                  placeholder="Enter your first name"
+                  id="first_name"
+                />
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="last_name" class="form-label">Last Name</label>
+                <input
+                  #last_name="ngModel"
+                  [(ngModel)]="formData.last_name"
+                  type="text"
+                  name="last_name"
+                  class="form-control mb-2"
+                  placeholder="Enter your last_name"
+                  id="last_name"
+                />
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  required
+                  #email="ngModel"
+                  [(ngModel)]="formData.email"
+                  type="email"
+                  name="email"
+                  class="form-control mb-2"
+                  placeholder="Enter your email"
+                  id="email"
+                />
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="Password" class="form-label">Password</label>
+                <div class="input-group d-flex mb-3">
+                  <input
+                    required
+                    #password="ngModel"
+                    [(ngModel)]="formData.password"
+                    [type]="!passwordType ? 'password' : 'text'"
+                    name="password"
+                    class="form-control"
+                    [placeholder]="
+                      !passwordType ? '************' : '1234567890'
+                    "
+                    id="password"
+                  />
+                  <span *ngIf="passwordType" class="input-group-text"
+                    ><i (click)="passwordType = false" class="ri-eye-line"></i
+                  ></span>
+                  <span *ngIf="!passwordType" class="input-group-text"
+                    ><i
+                      (click)="passwordType = true"
+                      class="ri-eye-off-line"
+                    ></i>
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="mobile" class="form-label">Mobile Number</label>
+                <input
+                  required
+                  appNumberInput
+                  #mobile_number="ngModel"
+                  [(ngModel)]="formData.mobile_number"
+                  type="text"
+                  name="mobile_number"
+                  class="form-control mb-2"
+                  placeholder="Enter your mobile"
+                  id="mobile"
+                  maxlength="10"
+                />
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="Age" class="form-label">Age</label>
+                <input
+                  #age="ngModel"
+                  [(ngModel)]="formData.age"
+                  type="text"
+                  appNumberInput
+                  name="age"
+                  class="form-control mb-2"
+                  placeholder="Enter your age"
+                  id="Age"
+                  maxlength="3"
+                />
+              </div>
+            </div>
+            <p
+              class="forgot my-3"
+              (click)="
+                isSignUpPage = false; form.form.markAsUntouched(); formData = {}
+              "
+              *ngIf="isSignUpPage"
+            >
+              Already have an account? Sign in
+              <i class="ri-arrow-right-line"></i>
+            </p>
+          </ng-container>
+          <button class="btn login">
+            Sign {{ !isSignUpPage ? "in" : "up" }}
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
