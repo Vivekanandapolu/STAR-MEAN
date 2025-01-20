@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import { fileURLToPath } from "url";
 import "./src/validators/env.validator.js";
 import path from "path";
+import helmet from "helmet";
 import fs from "fs";
 import { connectDB } from "./src/configs/mongoose.connect.js";
 import errorHandler from "./src/middlewares/errorHandler.js";
@@ -24,6 +25,7 @@ dotenv.config();
 
 //Allow cors for api's access to the external devices
 app.use(cors());
+app.use(helmet());
 
 //Parsing the request & response body in json fomrat
 app.use(express.json());

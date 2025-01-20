@@ -85,6 +85,8 @@ export class ContactUsComponent {
     form.value.contact_type = this.selectedMethod;
     this.http.post(apis.node_contactUs, form.value).subscribe((res: any) => {
       if (res.success) {
+        this.formData = {};
+        form.form.markAsUntouched();
         this.toastr.success(res?.message);
       }
     });
