@@ -26,3 +26,4 @@ export const apis = {
   node_signup: domain + 'api/auth/user/create',
   node_contactUs: domain + 'api/support/create',
 };
+console.log(apis, 'apis');
