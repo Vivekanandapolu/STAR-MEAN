@@ -23,8 +23,12 @@ const app = express();
 // load all enviranment variables
 dotenv.config();
 
+const corsOptions = {
+  origin: "*",
+  optionsSuccessStatus: 200,
+};
 //Allow cors for api's access to the external devices
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(helmet());
 
 //Parsing the request & response body in json fomrat
