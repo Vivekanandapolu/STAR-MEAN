@@ -7,7 +7,6 @@ import { jwtDecode } from 'jwt-decode';
 export class AuthTokenService {
   constructor() {}
   isTokenExprired(token: string) {
-    console.log(token, '//token');
     const decodedToken: any = jwtDecode(token);
     const currentTime = Date.now() / 1000;
 
