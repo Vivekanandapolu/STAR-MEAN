@@ -24,7 +24,7 @@ const app = express();
 dotenv.config();
 
 const corsOptions = {
-  origin: "*",
+  origin: "https://star-design.onrender.com",
   optionsSuccessStatus: 200,
 };
 //Allow cors for api's access to the external devices
