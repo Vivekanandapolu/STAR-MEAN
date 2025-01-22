@@ -28,7 +28,7 @@ const corsOptions = {
 };
 //Allow cors for api's access to the external devices
 app.use(cors(corsOptions));
-app.use(helmet());
+// app.use(helmet());
 
 //Parsing the request & response body in json fomrat
 app.use(express.json());
