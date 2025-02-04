@@ -1,32 +1,23 @@
 export function courseValidation(req, res, next) {
   function checkFields(course) {
-    const {
-      title,
-      duration,
-      description,
-      course_fee,
-      batch_date,
-      route,
-      course_img,
-      bg_img,
-      eligibility,
-    } = course;
+    const keys = [
+      "title",
+      "duration",
+      "description",
+      "course_fee",
+      "batch_date",
+      "route",
+      "course_img",
+      "bg_img",
+    ];
 
-    if (
-      !title ||
-      !duration ||
-      !description ||
-      !course_fee ||
-      !batch_date ||
-      !route ||
-      !course_img ||
-      !bg_img ||
-      !eligibility
-    ) {
+    //Store the missed keys from the request body
+    const missedKeys = keys.filter((key) => !course[key]);
+    if (missedKeys.length > 0) {
       return next({
         status: 422,
         success: false,
-        message: "Submit All Fields",
+        message: `Following fields are unset -> ${missedKeys.join(" ,")}`,
       });
     }
   }

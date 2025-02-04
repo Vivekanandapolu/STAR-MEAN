@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import { fileURLToPath } from "url";
 import "./src/validators/env.validator.js";
 import path from "path";
-import helmet from "helmet";
+// import helmet from "helmet";
 import fs from "fs";
 import { connectDB } from "./src/configs/mongoose.connect.js";
 import errorHandler from "./src/middlewares/errorHandler.js";
@@ -17,7 +17,6 @@ import supportRoutes from "./src/routers/support.routes.js";
 import mongoose from "mongoose";
 
 //Start of the Application
-
 const app = express();
 
 // load all enviranment variables

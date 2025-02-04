@@ -20,10 +20,7 @@ export class CourseController {
   //Get all courses
   async getAllCourses(req, res, next) {
     try {
-      const courses = await courseModel.find(
-        { isDelete: false },
-        { isDelete: 0, __v: 0 }
-      );
+      const courses = await courseModel.find({}, { isDelete: 0, __v: 0 });
       return res.status(200).json({
         success: true,
         data: courses,
@@ -75,7 +72,10 @@ export class CourseController {
         });
       }
 
-      const deletedCourse = await courseModel.findByIdAndDelete(id);
+      const deletedCourse = await courseModel.findByIdAndDelete(id, {
+        isDelete: 0,
+        __v: 0,
+      });
 
       return res.status(200).json({
         message: "Course Deleted Successfully",
@@ -100,7 +100,7 @@ export class CourseController {
       }
       const course = await courseModel.findOne(
         {
-          $and: [{ route }, { isDelete: false }],
+          $and: [{ route }],
         },
         { isDelete: 0, __v: 0 }
       );
